@@ -6,29 +6,29 @@ import java.util.UUID;
  * The class room.
  */
 public class Room {
-    private UUID uuid;
+    private Integer id;
     private boolean isAvailable;
     private boolean isOcupated;
 
     /**
      * Consturct a room
      *
-     * @param uuid        The uuid must be unique.
+     * @param id        The uuid must be unique.
      * @param isAvailable Shows if the room is available.
      * @param isOcupated  Shows if the room is ocupated.
      */
-    public Room(UUID uuid, boolean isAvailable, boolean isOcupated) {
-        this.uuid = uuid;
+    public Room(Integer id, boolean isAvailable, boolean isOcupated) {
+        this.id = id;
         this.isAvailable = isAvailable;
         this.isOcupated = isOcupated;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public Integer getUuid() {
+        return id;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setUuid(Integer uuid) {
+        this.id = uuid;
     }
 
     public boolean isAvailable() {
