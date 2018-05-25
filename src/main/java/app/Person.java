@@ -2,6 +2,9 @@ package app;
 
 import java.util.UUID;
 
+/**
+ *  The class Person.
+ */
 public abstract class Person {
     private String name;
     private String lastName;
