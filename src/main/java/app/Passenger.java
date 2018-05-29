@@ -8,6 +8,7 @@ import java.util.UUID;
 public class Passenger extends Person {
     private String originAdress;
 
+
     public Passenger(String name, String lastName, Integer dni, UUID uuid, String email) {
         super(name, lastName, dni, uuid, email);
     }
