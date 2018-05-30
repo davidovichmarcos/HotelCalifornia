@@ -1,9 +1,11 @@
 package app;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
 /**
- *  The class Passenger.
+ * The class Passenger.
+ * Add visit history.
  */
 public class Passenger extends Person {
     private String originAdress;
@@ -18,14 +20,16 @@ public class Passenger extends Person {
     }
 
     /**
-     *  Saves a booking in the hotel.
+     * Saves a booking in the hotel.
      */
-    public void makeABooking() {
+    public void makeABooking(LocalDate initDate, LocalDate finishDate, Integer roomId) {
+        boolean available = Hotel.isRoomAvailable(initDate, finishDate, roomId);
+        //if its available makes a booking ,if not show a message.
         //ToDo
     }
 
     /**
-     *  Charges an extra for the receipt.
+     * Charges an extra for the receipt.
      */
     public void consumeSomething() {
         //ToDo

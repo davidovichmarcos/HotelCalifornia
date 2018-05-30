@@ -5,7 +5,7 @@ import sun.security.util.Password;
 import java.util.UUID;
 
 /**
- *  The class admin.
+ * The class admin.
  */
 public class Admin extends Person implements User {
 
@@ -14,11 +14,20 @@ public class Admin extends Person implements User {
     public Admin(String name, String lastName, Integer dni, UUID uuid, String email) {
         super(name, lastName, dni, uuid, email);
     }
+
     /**
      * @return false if it's unauthorized, true if it's authorized.
      */
     public boolean signIn() {
         //ToDo
         return false;
+    }
+
+    public void makeABackup() {
+        //save in the files the entities.
+    }
+
+    public void createEmployee() {
+
     }
 }
