@@ -3,7 +3,7 @@ package app;
 import java.util.UUID;
 
 /**
- *  The class Person.
+ * The class Person.
  */
 public abstract class Person {
     private String name;
