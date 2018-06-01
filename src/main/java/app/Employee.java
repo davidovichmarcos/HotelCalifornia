@@ -12,7 +12,6 @@ public class Employee extends Person implements User, Comparable {
      * @param name
      * @param lastName
      * @param dni
-     * @param uuid
      * @param email
      */
     public Employee(String name, String lastName, Integer dni, String email) {

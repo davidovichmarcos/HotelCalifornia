@@ -10,7 +10,6 @@ import java.util.TreeSet;
  */
 public class Hotel {
     ArrayList<Room> rooms = new ArrayList<Room>();
-    Has
     TreeSet<Booking> bookings = new TreeSet<>();
     // booking no puede ser tree set. porque 1 room puede tener muchos bookings diferentes, hay que comprobar via metodo que esa room este disponible en el lapso de dias pedidos. Tendrian que estar ordenadas segun el id de la room y comprobado via codigo que no se pisen... seria un HASHMAP?
     TreeSet<Employee> employees = new TreeSet<>();

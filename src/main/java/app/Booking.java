@@ -36,11 +36,7 @@ public class Booking implements Comparable {
     }
 
     @Override
-    public int compareTo(Booking b) {
-        if (this.room<)
-
-    }
-/*    public int compareTo(Object o) {
+    public int compareTo(Object o) {
         Room comparator = (Room) o;
         if (this.room < comparator.getId()) {
             return -1;
@@ -49,10 +45,10 @@ public class Booking implements Comparable {
         } else {
             return 0;
         }
-    } */
+    }
 
     @Override
     public String toString() {
-        return "ID " + this.uuid + "PASSENGER: " + this.passenger.getName() +" " +this.passenger.getLastName()+ " ROOM: " +this.room + " From: " +this.initDate+" TO: " +this.finishDate+" State: " +this.bookingState;
+        return "ID " + this.uuid + "PASSENGER: " + this.passenger.getName() + " " + this.passenger.getLastName() + " ROOM: " + this.room + " From: " + this.initDate + " TO: " + this.finishDate + " State: " + this.bookingState;
     }
 }
