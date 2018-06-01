@@ -48,6 +48,9 @@ public class Hotel {
 
     /**
      * Do a checkIn.
+     * @param p Passenger who takes the room.
+     * @param room Number (id) of the room to do the check in to.
+     * @param days Amount of days the passenger will stay in.
      */
     public void checkIn(Passenger p, Integer room, Integer days) {
         // check if the room is reservated.
@@ -66,6 +69,8 @@ public class Hotel {
 
     /**
      * Do a checkOut.
+     * @param room Number (id) of room to checkout
+     * @return double Returns the amount of intakes made by passenger
      */
     public double checkOut(Integer room) {
         room --;
