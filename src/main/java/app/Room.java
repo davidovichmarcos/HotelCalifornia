@@ -7,40 +7,34 @@ import java.time.LocalDate;
  */
 public class Room {
     private Integer id;
+    private Integer capacity;
     private IsAvailable isAvailable;
     private boolean isOcupated;
     private LocalDate initDate;
     private LocalDate finishDate;
+    private Passenger guest;
+    private double intakes;
 
 
-    /**
-     * Consturct a room
+
+
+    /** Room Constructor 001
+     * @param id          The uuid must be unique.
+     * @param capacity    Cuantity of passangers this room can fit.
      *
-     * @param id          The uuid must be unique.
-     * @param isAvailable Shows if the room is available.
-     * @param isOcupated  Shows if the room is ocupated.
      */
-    public Room(Integer id, IsAvailable isAvailable, boolean isOcupated) {
+    public Room(Integer id, Integer capacity) {
         this.id = id;
-        this.isAvailable = isAvailable;
-        this.isOcupated = isOcupated;
-    }
+        this.capacity = capacity;
+        this.isAvailable = isAvailable.AVAILABLE;
+        this.isOcupated = false;
+        this.initDate = null;
+        this.finishDate = null;
+        this.guest = null;
+        this.intakes = 0;
 
-    /**
-     * @param id          The uuid must be unique.
-     * @param isAvailable Shows if the room is available.
-     * @param isOcupated  Shows if the room is ocupated.
-     * @param initDate    Init date of the ocupation.
-     * @param finishDate  Finish date of the ocupation.
-     */
-    public Room(Integer id, IsAvailable isAvailable, boolean isOcupated, LocalDate initDate, LocalDate finishDate) {
-        this.id = id;
-        this.isAvailable = isAvailable;
-        this.isOcupated = isOcupated;
-        this.initDate = initDate;
-        this.finishDate = finishDate;
     }
-
+    //// -----  GETTERS & SETTERS -------
     public Integer getId() {
         return id;
     }
@@ -48,6 +42,10 @@ public class Room {
     public void setId(Integer id) {
         this.id = id;
     }
+
+    public Integer getCapacity() { return capacity; }
+
+    public void setCapacity(Integer capacity) { this.capacity = capacity; }
 
     public IsAvailable isAvailable() {
         return isAvailable;
@@ -81,4 +79,34 @@ public class Room {
         this.finishDate = finishDate;
     }
 
+    public Passenger getGuest() {return guest; }
+
+    public void setGuest(Passenger guest) { this.guest = guest; }
+
+    public double getIntakes() { return intakes; }
+
+    public void setIntakes(double intakes) { this.intakes = intakes; }
+
+    //// -----  FINISH GETTERS & SETTERS -------
+
+
+    ////  ----  METHODS -----
+
+    public void addIntake(double value) {
+        this.intakes += value;
+    }
+
+
+
+
+
+
+    @Override
+    public String toString() {
+        if (this.isOcupated) {
+            return "Room :" + this.getId() + " Capacity: " + this.getCapacity() + "" + " Ocuppied: " + this.isOcupated() + " Guest: " + this.getGuest().getName() +" "+ this.getGuest().getLastName() + " From: " + this.getInitDate() + " To : " + this.getFinishDate();
+        } else {
+            return "Room :" + this.getId() + " Capacity: " + this.getCapacity() + "" + " Ocuppied: " + this.isOcupated();
+        }
+    }
 }

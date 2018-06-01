@@ -11,9 +11,9 @@ public class Admin extends Person implements User {
 
     private Password password;
 
-    public Admin(String name, String lastName, Integer dni, UUID uuid, String email) {
-        super(name, lastName, dni, uuid, email);
-    }
+   public Admin(String name, String lastName, Integer dni, String email) {
+        super(name, lastName, dni, email);
+   }
 
     /**
      * @return false if it's unauthorized, true if it's authorized.

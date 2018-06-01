@@ -6,17 +6,16 @@ import java.util.UUID;
 /**
  * The class Employee.
  */
-public class Employee extends Person implements User {
+public class Employee extends Person implements User, Comparable {
 
     /**
      * @param name
      * @param lastName
      * @param dni
-     * @param uuid
      * @param email
      */
-    public Employee(String name, String lastName, Integer dni, UUID uuid, String email) {
-        super(name, lastName, dni, uuid, email);
+    public Employee(String name, String lastName, Integer dni, String email) {
+        super(name, lastName, dni, email);
     }
 
     /**
@@ -36,6 +35,18 @@ public class Employee extends Person implements User {
 
     public void createPassenger() {
 
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Employee comparator = (Employee) o;
+        if (this.getDni() < comparator.getDni()) {
+            return -1;
+        } else if (this.getDni() > comparator.getDni()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
 }

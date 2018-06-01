@@ -13,17 +13,18 @@ public class Booking implements Comparable {
     private UUID uuid;
     private LocalDate initDate;
     private LocalDate finishDate;
-    private Person person;
-    private Room room;
-    private boolean bookingState;
+    private Passenger passenger;
+    private Integer room;
+    private boolean bookingState;   /// que funcion cumple???
 
-    public Booking(LocalDate initDate, LocalDate finishDate, Person person, Room room, boolean bookingState, UUID uuid) {
+    public Booking(LocalDate initDate, Integer days, Passenger passenger, Integer room, boolean bookingState) {
+        /// no tendria que autogenerarse un UUID cuando se crea?
         this.initDate = initDate;
-        this.finishDate = finishDate;
-        this.person = person;
+        this.finishDate = this.initDate.plusDays(days);
+        this.passenger = passenger;
         this.room = room;
         this.bookingState = bookingState;
-        this.uuid = uuid;
+        this.uuid = UUID.randomUUID();  /// autogenera su  uuid
     }
 
     /**
@@ -37,13 +38,17 @@ public class Booking implements Comparable {
     @Override
     public int compareTo(Object o) {
         Room comparator = (Room) o;
-        if (this.room.getId() < comparator.getId()) {
+        if (this.room < comparator.getId()) {
             return -1;
-        } else if (this.room.getId() > comparator.getId()) {
+        } else if (this.room > comparator.getId()) {
             return 1;
         } else {
             return 0;
         }
+    }
 
+    @Override
+    public String toString() {
+        return "ID " + this.uuid + "PASSENGER: " + this.passenger.getName() + " " + this.passenger.getLastName() + " ROOM: " + this.room + " From: " + this.initDate + " TO: " + this.finishDate + " State: " + this.bookingState;
     }
 }

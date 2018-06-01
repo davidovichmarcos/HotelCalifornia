@@ -8,15 +8,16 @@ import java.util.UUID;
  * Add visit history.
  */
 public class Passenger extends Person {
-    private String originAdress;
+    private String originAddress;
 
 
-    public Passenger(String name, String lastName, Integer dni, UUID uuid, String email) {
-        super(name, lastName, dni, uuid, email);
+    public Passenger(String name, String lastName, Integer dni, String email, String address) {
+        super(name, lastName, dni, email);
+        this.originAddress = address;
     }
 
     public String getOriginAdress() {
-        return originAdress;
+        return originAddress;
     }
 
     /**

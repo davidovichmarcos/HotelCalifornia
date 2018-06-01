@@ -3,7 +3,8 @@ package app;
 public enum IsAvailable {
     CLEANING("Cleaning reason"),
     REPARATION("Reparation reason"),
-    DISINFECTION("disinfection reason");
+    DISINFECTION("disinfection reason"),
+    AVAILABLE ("Room is available");   /// agregue la base
 
 
     private String reason;
