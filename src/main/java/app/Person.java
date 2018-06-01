@@ -20,36 +20,28 @@ public abstract class Person {
         //this.uuid = uuid;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) { this.name = name; }
 
-    public String getLastName() {
-        return lastName;
-    }
+    public String getLastName() { return lastName; }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+    public void setLastName(String lastName) { this.lastName = lastName; }
 
-    public Integer getDni() {
-        return dni;
-    }
+    public Integer getDni() { return dni; }
 
-    public void setDni(Integer dni) {
-        this.dni = dni;
-    }
+    public void setDni(Integer dni) { this.dni = dni; }
 
-    public UUID getUuid() {
+    /*public UUID getUuid() {
         return uuid;
     }
 
     public void setUuid(UUID uuid) {
         this.uuid = uuid;
-    }
+    }*/
 
+    @Override
+    public String toString() {
+        return this.name +" "+ this.lastName +" DNI: "+ this.dni + " Email: " +this.email;
+    }
 }

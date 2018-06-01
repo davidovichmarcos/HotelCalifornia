@@ -13,6 +13,7 @@ public class Room {
     private LocalDate initDate;
     private LocalDate finishDate;
     private Passenger guest;
+    private double intakes;
 
 
 
@@ -30,6 +31,7 @@ public class Room {
         this.initDate = null;
         this.finishDate = null;
         this.guest = null;
+        this.intakes = 0;
 
     }
     //// -----  GETTERS & SETTERS -------
@@ -81,10 +83,18 @@ public class Room {
 
     public void setGuest(Passenger guest) { this.guest = guest; }
 
+    public double getIntakes() { return intakes; }
+
+    public void setIntakes(double intakes) { this.intakes = intakes; }
+
     //// -----  FINISH GETTERS & SETTERS -------
 
 
     ////  ----  METHODS -----
+
+    public void addIntake(double value) {
+        this.intakes += value;
+    }
 
     public void checkIn (Passenger p, Integer days) {
         this.isOcupated = true;
@@ -93,17 +103,21 @@ public class Room {
         this.finishDate = LocalDate.now().plusDays(days);
     }
 
-    public void chackOut () {
+    public double checkOut () {
+        double r=this.getIntakes();
         this.isOcupated = false;
         this.guest = null;
         this.initDate = null;
         this.finishDate = null;
+        this.intakes=0;
+        return r;
     }
+
 
     @Override
     public String toString() {
         if (this.isOcupated) {
-            return "Room :" + this.getId() + " Capacity: " + this.getCapacity() + "" + " Ocuppied: " + this.isOcupated() + " Guest: " + this.getGuest() + " From: " + this.getInitDate() + " To : " + this.getFinishDate();
+            return "Room :" + this.getId() + " Capacity: " + this.getCapacity() + "" + " Ocuppied: " + this.isOcupated() + " Guest: " + this.getGuest().getName() +" "+ this.getGuest().getLastName() + " From: " + this.getInitDate() + " To : " + this.getFinishDate();
         } else {
             return "Room :" + this.getId() + " Capacity: " + this.getCapacity() + "" + " Ocuppied: " + this.isOcupated();
         }

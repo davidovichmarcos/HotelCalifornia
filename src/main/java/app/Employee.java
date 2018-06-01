@@ -15,8 +15,8 @@ public class Employee extends Person implements User, Comparable {
      * @param uuid
      * @param email
      */
-    public Employee(String name, String lastName, Integer dni, UUID uuid, String email) {
-        super(name, lastName, dni, uuid, email);
+    public Employee(String name, String lastName, Integer dni, String email) {
+        super(name, lastName, dni, email);
     }
 
     /**
