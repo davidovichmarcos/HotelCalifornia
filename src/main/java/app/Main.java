@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
       // System.out.println("Hello");
       // Login login = new Login(500, 200, "Login", true);
 
