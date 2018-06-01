@@ -49,21 +49,35 @@ public class Hotel {
     /**
      * Do a checkIn.
      */
-    public void checkIn(Passenger passenger, Room room, Integer days) {
+    public void checkIn(Passenger p, Integer room, Integer days) {
         // check if the room is reservated.
-        // check if the room is ocupated.
-        //ToDo
+        room --;
+        if (!(rooms.get(room).isOcupated())) {
+            Room roomAux = rooms.get(room);
+            roomAux.setOcupated(true);
+            roomAux.setGuest(p);
+            roomAux.setInitDate(LocalDate.now());
+            roomAux.setFinishDate(LocalDate.now().plusDays(days));
+            rooms.set(room, roomAux);
+        } else {
+            System.out.println("HABITACION OCUPADA.");
+        }
     }
 
     /**
      * Do a checkOut.
      */
-    public void checkOut(Room room) {
-        Room roomAux = rooms.get(room.getId() - 1);
+    public double checkOut(Integer room) {
+        room --;
+        Room roomAux = rooms.get(room);
+        double r=roomAux.getIntakes();
         roomAux.setOcupated(false);
         roomAux.setInitDate(null);
         roomAux.setFinishDate(null);
-        rooms.set(room.getId() - 1, roomAux);
+        roomAux.setGuest(null);
+        roomAux.setIntakes(0);
+        rooms.set(room, roomAux);
+        return r;
     }
 
 }

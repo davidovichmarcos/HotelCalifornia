@@ -96,22 +96,9 @@ public class Room {
         this.intakes += value;
     }
 
-    public void checkIn (Passenger p, Integer days) {
-        this.isOcupated = true;
-        this.guest=p;
-        this.initDate = LocalDate.now();
-        this.finishDate = LocalDate.now().plusDays(days);
-    }
 
-    public double checkOut () {
-        double r=this.getIntakes();
-        this.isOcupated = false;
-        this.guest = null;
-        this.initDate = null;
-        this.finishDate = null;
-        this.intakes=0;
-        return r;
-    }
+
+
 
 
     @Override

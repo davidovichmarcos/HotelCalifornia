@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="fba19d38-1a8e-4aef-83ca-19389ca3f8fe" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Admin.java" afterPath="$PROJECT_DIR$/src/main/java/app/Admin.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/app/Employee.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Hotel.java" afterPath="$PROJECT_DIR$/src/main/java/app/Hotel.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Passenger.java" afterPath="$PROJECT_DIR$/src/main/java/app/Passenger.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Person.java" afterPath="$PROJECT_DIR$/src/main/java/app/Person.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/Room.java" afterPath="$PROJECT_DIR$/src/main/java/app/Room.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/Hotel.class" afterPath="$PROJECT_DIR$/target/classes/app/Hotel.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/Main.class" afterPath="$PROJECT_DIR$/target/classes/app/Main.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/Room.class" afterPath="$PROJECT_DIR$/target/classes/app/Room.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,25 +21,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Room.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+            <state relative-caret-position="154">
+              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding>
                 <element signature="e#2123#2124#0" expanded="true" />
                 <element signature="e#2160#2161#0" expanded="true" />
-                <element signature="method#checkIn#0;class#Room#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/Main.java">
+      <file leaf-file-name="Hotel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/Hotel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            <state relative-caret-position="363">
+              <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -90,16 +99,6 @@
                 <element signature="e#1014#1015#0" expanded="true" />
                 <element signature="e#1111#1112#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hotel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/Hotel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -168,13 +167,13 @@
         <option value="$PROJECT_DIR$/src/main/java/app/Booking.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/User.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/app/Hotel.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/IsAvailable.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Passenger.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Admin.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/Hotel.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Main.java" />
       </list>
     </option>
@@ -391,7 +390,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25605816" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25605816" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -502,14 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/Hotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -517,17 +508,6 @@
           <folding>
             <element signature="e#260#261#0" expanded="true" />
             <element signature="e#308#309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -551,23 +531,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/Room.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/Hotel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+        <state relative-caret-position="363">
+          <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding>
-            <element signature="e#2123#2124#0" expanded="true" />
-            <element signature="e#2160#2161#0" expanded="true" />
-            <element signature="method#checkIn#0;class#Room#0" expanded="false" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="165">
+          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding>
+            <element signature="e#2123#2124#0" expanded="true" />
+            <element signature="e#2160#2161#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
