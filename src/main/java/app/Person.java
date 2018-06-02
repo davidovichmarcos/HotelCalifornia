@@ -10,14 +10,12 @@ public abstract class Person {
     private String lastName;
     private String email;
     private Integer dni;
-    /*private UUID uuid; */ /// lo saque porque el id esta dado por el dni
 
     public Person(String name, String lastName, Integer dni, String email) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.dni = dni;
-        //this.uuid = uuid;
     }
 
     public String getName() { return name; }
@@ -31,14 +29,6 @@ public abstract class Person {
     public Integer getDni() { return dni; }
 
     public void setDni(Integer dni) { this.dni = dni; }
-
-    /*public UUID getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }*/
 
     @Override
     public String toString() {

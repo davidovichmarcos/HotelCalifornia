@@ -1,8 +1,6 @@
 package app.helpers;
 
-import app.Employee;
-import app.Passenger;
-import app.Room;
+import app.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
@@ -17,6 +15,42 @@ public class FileHelper {
     File bookingsFile = new File(".\\src\\main\\java\\app\\files\\BookingsFile");
     File passengersFile = new File(".\\src\\main\\java\\app\\files\\PassengersFile");
     File roomsFile = new File(".\\src\\main\\java\\app\\files\\RoomsFile");
+
+
+    /**
+     * Saves the treeset of Admins in the adminsFile.
+     *
+     * @param admins The treseet of admins.
+     */
+    public void adminsToJsonFile(TreeSet<Admin> admins) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(adminsFile));
+            GsonBuilder gsonBuilder = new GsonBuilder();
+            gsonBuilder.setPrettyPrinting();
+            Gson gson = gsonBuilder.create();
+            gson.toJson(admins, TreeSet.class, writer);
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Get the admins from the Json.
+     *
+     * @return The treeSet of admins.
+     */
+    public TreeSet<Admin> getAdminsFromJson() {
+        TreeSet<Admin> admins = null;
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(adminsFile));
+            Gson gson = new Gson();
+            admins = gson.fromJson(reader, TreeSet.class);
+        } catch (IOException e) {
+
+        }
+        return admins;
+    }
 
     /**
      * Saves the treeset of employees in the employeesFile.

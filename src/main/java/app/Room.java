@@ -96,11 +96,6 @@ public class Room {
         this.intakes += value;
     }
 
-
-
-
-
-
     @Override
     public String toString() {
         if (this.isOcupated) {
