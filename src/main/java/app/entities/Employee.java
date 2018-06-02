@@ -1,4 +1,7 @@
-package app;
+package app.entities;
+
+import app.Person;
+import app.User;
 
 /**
  * The class Employee.

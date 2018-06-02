@@ -1,7 +1,9 @@
-package app;
+package app.entities;
+
+import app.Person;
+import app.entities.Hotel;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 /**
  * The class Passenger.

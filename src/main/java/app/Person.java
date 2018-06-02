@@ -1,7 +1,5 @@
 package app;
 
-import java.util.UUID;
-
 /**
  * The class Person.
  */

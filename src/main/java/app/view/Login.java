@@ -1,6 +1,4 @@
-package app;
-
-import app.view.WindowBase;
+package app.view;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

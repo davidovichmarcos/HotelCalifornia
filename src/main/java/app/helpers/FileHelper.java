@@ -1,9 +1,11 @@
 package app.helpers;
 
 import app.*;
+import app.entities.Employee;
+import app.entities.Passenger;
+import app.entities.Room;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
 
 import java.io.*;
 import java.util.ArrayList;
