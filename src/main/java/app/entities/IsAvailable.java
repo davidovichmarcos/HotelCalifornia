@@ -1,4 +1,4 @@
-package app;
+package app.entities;
 
 public enum IsAvailable {
     CLEANING("Cleaning reason"),

@@ -1,7 +1,7 @@
-package app;
+package app.entities;
 
-import java.util.UUID;
-
+import app.Person;
+import app.User;
 
 /**
  * The class Employee.

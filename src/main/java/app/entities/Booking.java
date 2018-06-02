@@ -1,7 +1,5 @@
-package app;
+package app.entities;
 
-
-import com.sun.xml.internal.ws.api.Component;
 
 import java.time.LocalDate;
 import java.util.UUID;

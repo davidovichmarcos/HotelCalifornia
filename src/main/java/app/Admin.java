@@ -2,8 +2,6 @@ package app;
 
 import sun.security.util.Password;
 
-import java.util.UUID;
-
 /**
  * The class admin.
  */

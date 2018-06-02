@@ -1,4 +1,4 @@
-package app;
+package app.entities;
 
 import java.time.LocalDate;
 
@@ -95,11 +95,6 @@ public class Room {
     public void addIntake(double value) {
         this.intakes += value;
     }
-
-
-
-
-
 
     @Override
     public String toString() {

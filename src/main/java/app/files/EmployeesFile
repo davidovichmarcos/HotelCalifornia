@@ -1,1 +1,14 @@
-{"name":"asd","lastName":"asd","email":"asd","dni":39966545,"uuid":"4c27bc45-9c74-4a85-9100-5564786e527e"}{"name":"ahre","lastName":"ahre","email":"ahre","dni":39966575,"uuid":"315c72fe-ca58-495e-968e-be3a4187309c"}
+[
+  {
+    "name": "AHREEEE",
+    "lastName": "asd",
+    "email": "asd",
+    "dni": 39966545
+  },
+  {
+    "name": "asd",
+    "lastName": "asd",
+    "email": "ahre",
+    "dni": 39966575
+  }
+]
