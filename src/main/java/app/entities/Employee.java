@@ -1,7 +1,7 @@
 package app.entities;
 
-import app.Person;
 import app.User;
+import app.UserImplementation;
 
 /**
  * The class Employee.
@@ -49,4 +49,13 @@ public class Employee extends Person implements User, Comparable {
         }
     }
 
+    @Override
+    public boolean signIn(UserImplementation userImplementation) {
+        return false;
+    }
+
+    @Override
+    public boolean signOut() {
+        return false;
+    }
 }

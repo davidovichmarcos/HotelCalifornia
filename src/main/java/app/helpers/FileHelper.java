@@ -1,23 +1,60 @@
 package app.helpers;
 
 import app.*;
+import app.entities.Admin;
 import app.entities.Employee;
 import app.entities.Passenger;
 import app.entities.Room;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.TreeSet;
+import java.util.*;
 
 public class FileHelper {
-    File employeesFile = new File(".\\src\\main\\java\\app\\files\\EmployeesFile");
-    File adminsFile = new File(".\\src\\main\\java\\app\\files\\AdminsFile");
-    File bookingsFile = new File(".\\src\\main\\java\\app\\files\\BookingsFile");
-    File passengersFile = new File(".\\src\\main\\java\\app\\files\\PassengersFile");
-    File roomsFile = new File(".\\src\\main\\java\\app\\files\\RoomsFile");
 
+
+    File bookingsFile = new File(".\\src\\main\\java\\app\\files\\BookingsFile");
+
+    /**
+     * Saves the Treeset of Users in the usersFile.
+     *
+     * @param users The TreeSet of users.
+     */
+    public void usersToJsonFile(TreeSet<UserImplementation> users) {
+        try {
+            File usersFile = new File(".\\src\\main\\java\\app\\files\\UsersFile");
+            BufferedWriter writer = new BufferedWriter(new FileWriter(usersFile));
+            GsonBuilder gsonBuilder = new GsonBuilder();
+            gsonBuilder.setPrettyPrinting();
+            Gson gson = gsonBuilder.create();
+            gson.toJson(users, TreeSet.class, writer);
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Get the users from the Json.
+     *
+     * @return The TreeSet of users.
+     */
+    public TreeSet<UserImplementation> getUsersFromJson() {
+        TreeSet<UserImplementation> users = new TreeSet<>();
+        try {
+            File usersFile = new File(".\\src\\main\\java\\app\\files\\UsersFile");
+            BufferedReader reader = new BufferedReader(new FileReader(usersFile));
+            Gson gson = new Gson();
+            users = gson.fromJson(reader, new TypeToken<TreeSet<UserImplementation>>() {
+            }.getType());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return users;
+    }
 
     /**
      * Saves the treeset of Admins in the adminsFile.
@@ -26,6 +63,7 @@ public class FileHelper {
      */
     public void adminsToJsonFile(TreeSet<Admin> admins) {
         try {
+            File adminsFile = new File(".\\src\\main\\java\\app\\files\\AdminsFile");
             BufferedWriter writer = new BufferedWriter(new FileWriter(adminsFile));
             GsonBuilder gsonBuilder = new GsonBuilder();
             gsonBuilder.setPrettyPrinting();
@@ -43,13 +81,15 @@ public class FileHelper {
      * @return The treeSet of admins.
      */
     public TreeSet<Admin> getAdminsFromJson() {
-        TreeSet<Admin> admins = null;
+        TreeSet<Admin> admins = new TreeSet<>();
         try {
+            File adminsFile = new File(".\\src\\main\\java\\app\\files\\AdminsFile");
             BufferedReader reader = new BufferedReader(new FileReader(adminsFile));
             Gson gson = new Gson();
-            admins = gson.fromJson(reader, TreeSet.class);
+            admins = gson.fromJson(reader, new TypeToken<TreeSet<Admin>>() {
+            }.getType());
         } catch (IOException e) {
-
+            e.printStackTrace();
         }
         return admins;
     }
@@ -61,6 +101,7 @@ public class FileHelper {
      */
     public void employeesToJsonFile(TreeSet<Employee> employees) {
         try {
+            File employeesFile = new File(".\\src\\main\\java\\app\\files\\EmployeesFile");
             BufferedWriter writer = new BufferedWriter(new FileWriter(employeesFile));
             GsonBuilder gsonBuilder = new GsonBuilder();
             gsonBuilder.setPrettyPrinting();
@@ -79,11 +120,13 @@ public class FileHelper {
      * @return TreeSet of employees.
      */
     public TreeSet<Employee> getEmployeesfromJson() {
-        TreeSet<Employee> employees = null;
+        TreeSet employees = new TreeSet<>();
         try {
+            File employeesFile = new File(".\\src\\main\\java\\app\\files\\EmployeesFile");
             BufferedReader reader = new BufferedReader(new FileReader(employeesFile));
             Gson gson = new Gson();
-            employees = gson.fromJson(reader, TreeSet.class);
+            employees = gson.fromJson(reader, new TypeToken<TreeSet<Employee>>() {
+            }.getType());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -97,6 +140,7 @@ public class FileHelper {
      */
     public void roomsToJsonFile(ArrayList<Room> rooms) {
         try {
+            File roomsFile = new File(".\\src\\main\\java\\app\\files\\RoomsFile");
             BufferedWriter writer = new BufferedWriter(new FileWriter(roomsFile));
             GsonBuilder gsonBuilder = new GsonBuilder();
             gsonBuilder.setPrettyPrinting();
@@ -114,11 +158,13 @@ public class FileHelper {
      * @return The ArrayList of rooms.
      */
     public ArrayList<Room> getRoomsFromJson() {
-        ArrayList<Room> rooms = null;
+        ArrayList<Room> rooms = new ArrayList<>();
         try {
+            File roomsFile = new File(".\\src\\main\\java\\app\\files\\RoomsFile");
             BufferedReader reader = new BufferedReader(new FileReader(roomsFile));
             Gson gson = new Gson();
-            rooms = gson.fromJson(reader, ArrayList.class);
+            rooms = gson.fromJson(reader, new TypeToken<ArrayList<Room>>() {
+            }.getType());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -132,6 +178,7 @@ public class FileHelper {
      */
     public void passengersToJsonFile(TreeSet<Passenger> passengers) {
         try {
+            File passengersFile = new File(".\\src\\main\\java\\app\\files\\PassengersFile");
             BufferedWriter writer = new BufferedWriter(new FileWriter(passengersFile));
             GsonBuilder gsonBuilder = new GsonBuilder();
             gsonBuilder.setPrettyPrinting();
@@ -152,9 +199,11 @@ public class FileHelper {
     public TreeSet<Passenger> getPassengersfromJson() {
         TreeSet<Passenger> passengers = null;
         try {
+            File passengersFile = new File(".\\src\\main\\java\\app\\files\\PassengersFile");
             BufferedReader reader = new BufferedReader(new FileReader(passengersFile));
             Gson gson = new Gson();
-            passengers = gson.fromJson(reader, TreeSet.class);
+            passengers = gson.fromJson(reader, new TypeToken<TreeSet<Passenger>>() {
+            }.getType());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

@@ -1,7 +1,7 @@
 package app.entities;
 
-import app.Person;
-import app.entities.Hotel;
+import app.User;
+import app.UserImplementation;
 
 import java.time.LocalDate;
 
@@ -9,7 +9,7 @@ import java.time.LocalDate;
  * The class Passenger.
  * Add visit history.
  */
-public class Passenger extends Person {
+public class Passenger extends Person implements User, Comparable {
     private String originAddress;
 
 
@@ -38,4 +38,25 @@ public class Passenger extends Person {
         //ToDo
     }
 
+    @Override
+    public boolean signIn(UserImplementation userImplementation) {
+        return false;
+    }
+
+    @Override
+    public boolean signOut() {
+        return false;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Passenger comparator = (Passenger) o;
+        if (this.getDni() < comparator.getDni()) {
+            return -1;
+        } else if (this.getDni() > comparator.getDni()) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }
