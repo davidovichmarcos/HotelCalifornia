@@ -1,5 +1,6 @@
 package app;
 
+import app.entities.Admin;
 import app.helpers.InputHelper;
 
 /**
@@ -15,6 +16,15 @@ public class Login {
         InputHelper inputHelper = new InputHelper();
         UserImplementation userImpl = inputHelper.getUser();
         access = userImpl.signIn(userImpl);
+        if (userImpl.getUserType().equals(UserType.ADMIN)) {
+            Admin admin= new Admin("newadmin","asd",684654,"emailfake");
+            admin.signIn(userImpl);
+        } else if ( userImpl.getUserType().equals(UserType.EMPLOYEE)) {
+
+        }else if (userImpl.getUserType().equals(UserType.PASSENGER)) {
+
+        }
+
         return access;
     }
 
