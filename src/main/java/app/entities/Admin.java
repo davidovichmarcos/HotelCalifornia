@@ -3,22 +3,28 @@ package app.entities;
 
 import app.User;
 import app.UserImplementation;
+import app.UserType;
 
 /**
  * The class admin.
  */
 public class Admin extends Person implements User, Comparable {
 
-   public Admin(String name, String lastName, Integer dni, String email) {
+    public Admin() {
+    }
+
+    public Admin(String name, String lastName, Integer dni, String email) {
         super(name, lastName, dni, email);
-   }
+    }
 
     /**
      * @return false if it's unauthorized, true if it's authorized.
      */
     @Override
     public boolean signIn(UserImplementation userImplementation) {
-        userImplementation.getUserType();
+        if (userImplementation.getUserType().equals(UserType.ADMIN)) {
+            //ToDo Admin menu.
+        }
         return false;
     }
 

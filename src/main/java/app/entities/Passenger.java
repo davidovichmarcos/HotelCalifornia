@@ -2,6 +2,7 @@ package app.entities;
 
 import app.User;
 import app.UserImplementation;
+import app.UserType;
 
 import java.time.LocalDate;
 
@@ -12,6 +13,8 @@ import java.time.LocalDate;
 public class Passenger extends Person implements User, Comparable {
     private String originAddress;
 
+    public Passenger() {
+    }
 
     public Passenger(String name, String lastName, Integer dni, String email, String address) {
         super(name, lastName, dni, email);
@@ -23,15 +26,6 @@ public class Passenger extends Person implements User, Comparable {
     }
 
     /**
-     * Saves a booking in the hotel.
-     */
-    public void makeABooking(LocalDate initDate, LocalDate finishDate, Integer roomId) {
-        boolean available = Hotel.isRoomAvailable(initDate, finishDate, roomId);
-        //if its available makes a booking ,if not show a message.
-        //ToDo
-    }
-
-    /**
      * Charges an extra for the receipt.
      */
     public void consumeSomething() {
@@ -40,6 +34,9 @@ public class Passenger extends Person implements User, Comparable {
 
     @Override
     public boolean signIn(UserImplementation userImplementation) {
+        if (userImplementation.getUserType().equals(UserType.PASSENGER)) {
+            //ToDo Passenger menu
+        }
         return false;
     }
 

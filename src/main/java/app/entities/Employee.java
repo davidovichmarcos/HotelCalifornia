@@ -2,11 +2,15 @@ package app.entities;
 
 import app.User;
 import app.UserImplementation;
+import app.UserType;
 
 /**
  * The class Employee.
  */
 public class Employee extends Person implements User, Comparable {
+
+    public Employee() {
+    }
 
     /**
      * @param name
@@ -19,15 +23,7 @@ public class Employee extends Person implements User, Comparable {
     }
 
     /**
-     * @return false if it's unauthorized, true if it's authorized.
-     */
-    public boolean signIn() {
-        //ToDo
-        return false;
-    }
-
-    /**
-     * Get the hotel rooms must call it in a bucle.
+     * Get the hotel rooms.
      */
     public void getRooms() {
         //ToDo
@@ -51,6 +47,9 @@ public class Employee extends Person implements User, Comparable {
 
     @Override
     public boolean signIn(UserImplementation userImplementation) {
+        if (userImplementation.getUserType().equals(UserType.EMPLOYEE)) {
+            //ToDo Employee menu
+        }
         return false;
     }
 

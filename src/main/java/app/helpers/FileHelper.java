@@ -43,14 +43,13 @@ public class FileHelper {
      *
      * @return The TreeSet of users.
      */
-    public static TreeSet<UserImplementation> getUsersFromJson() {
-        TreeSet<UserImplementation> users = new TreeSet<>();
+    public static Set<UserImplementation> getUsersFromJson() {
+        Set<UserImplementation> users = new TreeSet<>();
         try {
             File usersFile = new File(".\\src\\main\\java\\app\\files\\UsersFile");
             BufferedReader reader = new BufferedReader(new FileReader(usersFile));
             Gson gson = new Gson();
-            users = gson.fromJson(reader, new TypeToken<TreeSet<UserImplementation>>() {
-            }.getType());
+            users = gson.fromJson(reader, new TypeToken<Set<UserImplementation>>() {}.getType());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -81,8 +80,8 @@ public class FileHelper {
      *
      * @return The treeSet of admins.
      */
-    public static TreeSet<Admin> getAdminsFromJson() {
-        TreeSet<Admin> admins = new TreeSet<>();
+    public static Set<Admin> getAdminsFromJson() {
+        Set<Admin> admins = new TreeSet<>();
         try {
             File adminsFile = new File(".\\src\\main\\java\\app\\files\\AdminsFile");
             BufferedReader reader = new BufferedReader(new FileReader(adminsFile));
@@ -120,8 +119,8 @@ public class FileHelper {
      *
      * @return TreeSet of employees.
      */
-    public static TreeSet<Employee> getEmployeesfromJson() {
-        TreeSet employees = new TreeSet<>();
+    public static Set<Employee> getEmployeesfromJson() {
+        Set employees = new TreeSet<>();
         try {
             File employeesFile = new File(".\\src\\main\\java\\app\\files\\EmployeesFile");
             BufferedReader reader = new BufferedReader(new FileReader(employeesFile));
@@ -158,8 +157,8 @@ public class FileHelper {
      *
      * @return The ArrayList of rooms.
      */
-    public static ArrayList<Room> getRoomsFromJson() {
-        ArrayList<Room> rooms = new ArrayList<>();
+    public static List<Room> getRoomsFromJson() {
+        List<Room> rooms = new ArrayList<>();
         try {
             File roomsFile = new File(".\\src\\main\\java\\app\\files\\RoomsFile");
             BufferedReader reader = new BufferedReader(new FileReader(roomsFile));
@@ -197,8 +196,8 @@ public class FileHelper {
      *
      * @return TreeSet of employees.
      */
-    public static TreeSet<Passenger> getPassengersfromJson() {
-        TreeSet<Passenger> passengers = null;
+    public static Set<Passenger> getPassengersfromJson() {
+        Set<Passenger> passengers = null;
         try {
             File passengersFile = new File(".\\src\\main\\java\\app\\files\\PassengersFile");
             BufferedReader reader = new BufferedReader(new FileReader(passengersFile));

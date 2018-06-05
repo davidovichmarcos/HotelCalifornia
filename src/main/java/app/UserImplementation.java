@@ -1,6 +1,8 @@
 package app;
 
 import app.helpers.FileHelper;
+
+import java.util.Set;
 import java.util.TreeSet;
 
 /**
@@ -49,7 +51,7 @@ public class UserImplementation implements User, Comparable {
      */
     @Override
     public boolean signIn(UserImplementation userImplementation) {
-        TreeSet<UserImplementation> users = FileHelper.getUsersFromJson();
+        Set<UserImplementation> users = FileHelper.getUsersFromJson();
         for (User userCompare : users) {
             if (userImplementation.equals(userCompare)) {
                 return true;
@@ -97,4 +99,20 @@ public class UserImplementation implements User, Comparable {
         return false;
     }
 
+   @Override
+    public int hashCode() {
+        int result = String.valueOf(userName).hashCode();
+        result = 31 * result + String.valueOf(password).hashCode();
+        result = 31 * result + userType.hashCode();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        String userImplString = new String();
+        userImplString = ("UserName: "+userName+"\t");
+        userImplString = userImplString +("Password: "+password+"\t");
+        userImplString = userImplString +("User Type: "+userType+"\t");
+        return userImplString;
+    }
 }
