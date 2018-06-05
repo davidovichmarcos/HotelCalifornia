@@ -13,8 +13,7 @@ public class Login {
      * @return false if it's unauthorized, true if it's authorized.
      */
     public boolean logIn() {
-        InputHelper inputHelper = new InputHelper();
-        UserImplementation userImpl = inputHelper.getUser();
+        UserImplementation userImpl = InputHelper.getUser();
         access = userImpl.signIn(userImpl);
         if (userImpl.getUserType().equals(UserType.ADMIN)) {
             Admin admin= new Admin("newadmin","asd",684654,"emailfake");

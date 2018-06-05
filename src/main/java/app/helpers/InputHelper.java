@@ -19,7 +19,7 @@ public class InputHelper {
      *
      * @return A UserImplementation if its valid or a null if its invalid.
      */
-    public UserImplementation getUser() {
+    public static UserImplementation getUser() {
         try {
             System.out.println("Enter User Name: \n");
             Scanner userNameScanner = new Scanner(System.in);
