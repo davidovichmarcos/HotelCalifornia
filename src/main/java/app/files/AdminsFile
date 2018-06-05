@@ -1,0 +1,20 @@
+[
+  {
+    "name": "mcn",
+    "lastName": "ggg",
+    "email": "asd@asd.com",
+    "dni": 445
+  },
+  {
+    "name": "qwe",
+    "lastName": "qwe",
+    "email": "asd@asd.com",
+    "dni": 654
+  },
+  {
+    "name": "asd",
+    "lastName": "asd",
+    "email": "asd@asd.com",
+    "dni": 946
+  }
+]

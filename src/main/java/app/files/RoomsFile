@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "capacity": 2,
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 2,
+    "capacity": 2,
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 3,
+    "capacity": 4,
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  }
+]

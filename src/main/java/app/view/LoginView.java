@@ -5,12 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-public class Login {
+public class LoginView {
 
 
     private boolean success;
 
-    public Login(int x, int y, String title, boolean isVisible) {
+    public LoginView(int x, int y, String title, boolean isVisible) {
 
         JPanel panel = new JPanel(new GridBagLayout());
         GridBagConstraints cs = new GridBagConstraints();
