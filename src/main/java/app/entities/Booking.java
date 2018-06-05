@@ -9,44 +9,68 @@ import java.util.UUID;
  */
 public class Booking implements Comparable {
     private UUID uuid;
+    private Integer room;
+    private Passenger passenger;
     private LocalDate initDate;
     private LocalDate finishDate;
-    private Passenger passenger;
-    private Integer room;
-    private boolean bookingState;   /// que funcion cumple???
 
-    public Booking(LocalDate initDate, Integer days, Passenger passenger, Integer room, boolean bookingState) {
-        /// no tendria que autogenerarse un UUID cuando se crea?
+    public Booking(LocalDate initDate, Integer days, Passenger passenger, Integer room) {
+        this.uuid = UUID.randomUUID();
+        this.room = room;
+        this.passenger = passenger;
         this.initDate = initDate;
         this.finishDate = this.initDate.plusDays(days);
-        this.passenger = passenger;
-        this.room = room;
-        this.bookingState = bookingState;
-        this.uuid = UUID.randomUUID();  /// autogenera su  uuid
     }
 
-    /**
-     * Set the bookingState.
-     */
-    public boolean cancelBooking() {
-        this.bookingState = false;
-        return this.bookingState;
-    }
+
+    public Integer getRoom() { return room; }
+
+    public LocalDate getInitDate() { return initDate; }
+
+    public LocalDate getFinishDate() { return finishDate; }
+
+    public Passenger getPassenger() { return passenger; }
 
     @Override
     public int compareTo(Object o) {
-        Room comparator = (Room) o;
-        if (this.room < comparator.getId()) {
+        Booking comparator = (Booking) o;
+        if (this.initDate.isBefore(comparator.initDate)) {
             return -1;
-        } else if (this.room > comparator.getId()) {
+        } else if (this.initDate.isAfter(comparator.initDate)) {
             return 1;
         } else {
             return 0;
         }
     }
 
+
+    @Override
+    public boolean equals (Object o){
+        if (this == o)
+            return true;
+        if (o == null)
+            return false;
+        if (this.getClass()!= o.getClass()){
+            return false;
+        }else {
+            Booking b = (Booking) o;
+            if (this.getRoom()==b.getRoom() && this.initDate == b.initDate && this.finishDate==b.finishDate){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode(){
+        int r = Integer.hashCode(this.room);
+        r = 31*r;
+        return r;
+    }
+
+
     @Override
     public String toString() {
-        return "ID " + this.uuid + "PASSENGER: " + this.passenger.getName() + " " + this.passenger.getLastName() + " ROOM: " + this.room + " From: " + this.initDate + " TO: " + this.finishDate + " State: " + this.bookingState;
+        return "ID " + this.uuid + " PASSENGER: " + this.passenger.getName() + " " + this.passenger.getLastName() + " ROOM: " + this.room + " From: " + this.initDate + " TO: " + this.finishDate;
     }
 }
