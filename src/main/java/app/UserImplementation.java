@@ -1,6 +1,5 @@
 package app;
 
-
 import app.helpers.FileHelper;
 import java.util.TreeSet;
 
@@ -50,8 +49,7 @@ public class UserImplementation implements User, Comparable {
      */
     @Override
     public boolean signIn(UserImplementation userImplementation) {
-        FileHelper fileHelper = new FileHelper();
-        TreeSet<UserImplementation> users = fileHelper.getUsersFromJson();
+        TreeSet<UserImplementation> users = FileHelper.getUsersFromJson();
         for (User userCompare : users) {
             if (userImplementation.equals(userCompare)) {
                 return true;

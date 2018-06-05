@@ -1,6 +1,7 @@
 package app.helpers;
 
-import app.*;
+
+import app.UserImplementation;
 import app.entities.Admin;
 import app.entities.Employee;
 import app.entities.Passenger;
@@ -23,7 +24,7 @@ public class FileHelper {
      *
      * @param users The TreeSet of users.
      */
-    public void usersToJsonFile(TreeSet<UserImplementation> users) {
+    public static void usersToJsonFile(TreeSet<UserImplementation> users) {
         try {
             File usersFile = new File(".\\src\\main\\java\\app\\files\\UsersFile");
             BufferedWriter writer = new BufferedWriter(new FileWriter(usersFile));
@@ -42,7 +43,7 @@ public class FileHelper {
      *
      * @return The TreeSet of users.
      */
-    public TreeSet<UserImplementation> getUsersFromJson() {
+    public static TreeSet<UserImplementation> getUsersFromJson() {
         TreeSet<UserImplementation> users = new TreeSet<>();
         try {
             File usersFile = new File(".\\src\\main\\java\\app\\files\\UsersFile");
@@ -61,7 +62,7 @@ public class FileHelper {
      *
      * @param admins The treseet of admins.
      */
-    public void adminsToJsonFile(TreeSet<Admin> admins) {
+    public static void adminsToJsonFile(TreeSet<Admin> admins) {
         try {
             File adminsFile = new File(".\\src\\main\\java\\app\\files\\AdminsFile");
             BufferedWriter writer = new BufferedWriter(new FileWriter(adminsFile));
@@ -80,7 +81,7 @@ public class FileHelper {
      *
      * @return The treeSet of admins.
      */
-    public TreeSet<Admin> getAdminsFromJson() {
+    public static TreeSet<Admin> getAdminsFromJson() {
         TreeSet<Admin> admins = new TreeSet<>();
         try {
             File adminsFile = new File(".\\src\\main\\java\\app\\files\\AdminsFile");
@@ -99,7 +100,7 @@ public class FileHelper {
      *
      * @param employees The treeset of employees.
      */
-    public void employeesToJsonFile(TreeSet<Employee> employees) {
+    public static void employeesToJsonFile(TreeSet<Employee> employees) {
         try {
             File employeesFile = new File(".\\src\\main\\java\\app\\files\\EmployeesFile");
             BufferedWriter writer = new BufferedWriter(new FileWriter(employeesFile));
@@ -119,7 +120,7 @@ public class FileHelper {
      *
      * @return TreeSet of employees.
      */
-    public TreeSet<Employee> getEmployeesfromJson() {
+    public static TreeSet<Employee> getEmployeesfromJson() {
         TreeSet employees = new TreeSet<>();
         try {
             File employeesFile = new File(".\\src\\main\\java\\app\\files\\EmployeesFile");
@@ -138,7 +139,7 @@ public class FileHelper {
      *
      * @param rooms The arrayList of rooms.
      */
-    public void roomsToJsonFile(ArrayList<Room> rooms) {
+    public static void roomsToJsonFile(ArrayList<Room> rooms) {
         try {
             File roomsFile = new File(".\\src\\main\\java\\app\\files\\RoomsFile");
             BufferedWriter writer = new BufferedWriter(new FileWriter(roomsFile));
@@ -157,7 +158,7 @@ public class FileHelper {
      *
      * @return The ArrayList of rooms.
      */
-    public ArrayList<Room> getRoomsFromJson() {
+    public static ArrayList<Room> getRoomsFromJson() {
         ArrayList<Room> rooms = new ArrayList<>();
         try {
             File roomsFile = new File(".\\src\\main\\java\\app\\files\\RoomsFile");
@@ -176,7 +177,7 @@ public class FileHelper {
      *
      * @param passengers The treeset of passengers.
      */
-    public void passengersToJsonFile(TreeSet<Passenger> passengers) {
+    public static void passengersToJsonFile(TreeSet<Passenger> passengers) {
         try {
             File passengersFile = new File(".\\src\\main\\java\\app\\files\\PassengersFile");
             BufferedWriter writer = new BufferedWriter(new FileWriter(passengersFile));
@@ -196,7 +197,7 @@ public class FileHelper {
      *
      * @return TreeSet of employees.
      */
-    public TreeSet<Passenger> getPassengersfromJson() {
+    public static TreeSet<Passenger> getPassengersfromJson() {
         TreeSet<Passenger> passengers = null;
         try {
             File passengersFile = new File(".\\src\\main\\java\\app\\files\\PassengersFile");
