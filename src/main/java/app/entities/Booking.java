@@ -23,13 +23,21 @@ public class Booking implements Comparable {
     }
 
 
-    public Integer getRoom() { return room; }
+    public Integer getRoom() {
+        return room;
+    }
 
-    public LocalDate getInitDate() { return initDate; }
+    public LocalDate getInitDate() {
+        return initDate;
+    }
 
-    public LocalDate getFinishDate() { return finishDate; }
+    public LocalDate getFinishDate() {
+        return finishDate;
+    }
 
-    public Passenger getPassenger() { return passenger; }
+    public Passenger getPassenger() {
+        return passenger;
+    }
 
     @Override
     public int compareTo(Object o) {
@@ -45,16 +53,16 @@ public class Booking implements Comparable {
 
 
     @Override
-    public boolean equals (Object o){
+    public boolean equals(Object o) {
         if (this == o)
             return true;
         if (o == null)
             return false;
-        if (this.getClass()!= o.getClass()){
+        if (this.getClass() != o.getClass()) {
             return false;
-        }else {
+        } else {
             Booking b = (Booking) o;
-            if (this.getRoom()==b.getRoom() && this.initDate == b.initDate && this.finishDate==b.finishDate){
+            if (this.getRoom() == b.getRoom() && this.initDate == b.initDate && this.finishDate == b.finishDate) {
                 return true;
             }
         }
@@ -62,9 +70,9 @@ public class Booking implements Comparable {
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         int r = Integer.hashCode(this.room);
-        r = 31*r;
+        r = 31 * r;
         return r;
     }
 

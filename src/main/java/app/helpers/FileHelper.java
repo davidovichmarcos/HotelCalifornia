@@ -2,10 +2,7 @@ package app.helpers;
 
 
 import app.UserImplementation;
-import app.entities.Admin;
-import app.entities.Employee;
-import app.entities.Passenger;
-import app.entities.Room;
+import app.entities.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -49,7 +46,8 @@ public class FileHelper {
             File usersFile = new File(".\\src\\main\\java\\app\\files\\UsersFile");
             BufferedReader reader = new BufferedReader(new FileReader(usersFile));
             Gson gson = new Gson();
-            users = gson.fromJson(reader, new TypeToken<Set<UserImplementation>>() {}.getType());
+            users = gson.fromJson(reader, new TypeToken<Set<UserImplementation>>() {
+            }.getType());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -172,9 +170,9 @@ public class FileHelper {
     }
 
     /**
-     * Saves the treeset of passengers in the passengersFile.
+     * Saves the TreeSet of passengers in the passengersFile.
      *
-     * @param passengers The treeset of passengers.
+     * @param passengers The TreeSet of passengers.
      */
     public static void passengersToJsonFile(TreeSet<Passenger> passengers) {
         try {
@@ -208,6 +206,45 @@ public class FileHelper {
             e.printStackTrace();
         }
         return passengers;
+    }
+
+    /**
+     * Saves the TreeMap of bookings in the bookingsFile.
+     *
+     * @param bookings
+     */
+    public static void bookingsToJsonFile(TreeMap<Integer, TreeSet<Booking>> bookings) {
+        try {
+            File bookingsFile = new File(".\\src\\main\\java\\app\\files\\BookingsFile");
+            BufferedWriter writer = new BufferedWriter(new FileWriter(bookingsFile));
+            GsonBuilder gsonBuilder = new GsonBuilder();
+            gsonBuilder.setPrettyPrinting();
+            Gson gson = gsonBuilder.create();
+            gson.toJson(bookings, TreeMap.class, writer);
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Get the bookings from the Json file.
+     *
+     * @return The TreeMap of Bookings.
+     */
+    public static Map<Integer, TreeSet<Booking>> getBookingsfromJson() {
+        Map<Integer, TreeSet<Booking>> bookings = null;
+        try {
+            File bookingsFile = new File(".\\src\\main\\java\\app\\files\\BookingsFile");
+            BufferedReader reader = new BufferedReader(new FileReader(bookingsFile));
+            Gson gson = new Gson();
+            bookings = gson.fromJson(reader, new TypeToken<TreeMap<Integer, TreeSet<Booking>>>() {
+            }.getType());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return bookings;
     }
 
 }
