@@ -1,0 +1,71 @@
+{
+  "1": [
+    {
+      "uuid": "047ddb95-baa9-453b-b078-e414864b227a",
+      "room": 1,
+      "passenger": {
+        "originAddress": "dubai",
+        "name": "Diego",
+        "lastName": "Maradona",
+        "email": "eldiegote@gmail.com",
+        "dni": 38855220
+      },
+      "initDate": {
+        "year": 2018,
+        "month": 6,
+        "day": 5
+      },
+      "finishDate": {
+        "year": 2018,
+        "month": 6,
+        "day": 9
+      }
+    }
+  ],
+  "2": [
+    {
+      "uuid": "0174c390-fc5a-47ba-855e-6d22d0faa727",
+      "room": 2,
+      "passenger": {
+        "originAddress": "Chaco 222",
+        "name": "Marcos",
+        "lastName": "Davidovich",
+        "email": "marcos.infosis@gmail.com",
+        "dni": 39966575
+      },
+      "initDate": {
+        "year": 2018,
+        "month": 6,
+        "day": 5
+      },
+      "finishDate": {
+        "year": 2018,
+        "month": 6,
+        "day": 10
+      }
+    }
+  ],
+  "3": [
+    {
+      "uuid": "ff1214f0-f7d9-4480-9e24-3cd177793b7d",
+      "room": 3,
+      "passenger": {
+        "originAddress": "Chacabuco 546",
+        "name": "Chavo",
+        "lastName": "Desabato",
+        "email": "chavo@desabato.com",
+        "dni": 123123
+      },
+      "initDate": {
+        "year": 2018,
+        "month": 6,
+        "day": 5
+      },
+      "finishDate": {
+        "year": 2018,
+        "month": 6,
+        "day": 12
+      }
+    }
+  ]
+}
