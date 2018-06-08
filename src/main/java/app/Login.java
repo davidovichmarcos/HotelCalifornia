@@ -14,11 +14,33 @@ public class Login {
     private boolean access;
 
     /**
-     * @return false if it's unauthorized, true if it's authorized.
+     * Try to access to the system asking for valid users.
      */
-    public boolean logIn() {
-        UserImplementation userImpl = InputHelper.getUser();
-        access = userImpl.signIn(userImpl);
+
+    public void logIn(UserImplementation userImplementation) {
+        while (!isValidUser(userImplementation)) {
+            System.out.println("User not valid asshole");
+            userImplementation = InputHelper.getUser();
+        }
+        this.handleUsers(userImplementation);
+    }
+
+    /**
+     * This method implements a lambda expression to validate if the user is valid.
+     *
+     * @param userImpl The implementation of the user.
+     * @return false if the user isn't valid or true if it is.
+     */
+    public boolean isValidUser(UserImplementation userImpl) {
+        UserPredicate isLoginSuccess = (UserImplementation p) -> p.signIn(p);
+        return isLoginSuccess.test(userImpl);
+    }
+
+    /**
+     * Handle the users just before the login function, call the signIn method of each specific user.
+     * @param userImpl The implementation of the user.
+     */
+    public void handleUsers(UserImplementation userImpl) {
         if (userImpl.getUserType().equals(UserType.ADMIN)) {
             Admin admin = new Admin();
             admin.signIn(userImpl);
@@ -29,8 +51,6 @@ public class Login {
             Passenger passenger = new Passenger();
             passenger.signIn(userImpl);
         }
-
-        return access;
     }
 
 }
