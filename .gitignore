@@ -8,7 +8,7 @@
 
 # BlueJ files
 *.ctxt
-*./workspace.xml
+*.idea/workspace.xml
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -36,3 +36,4 @@ buildNumber.properties
 .mvn/timing.properties
 *.class
 *.class
+/.idea/workspace.xml
