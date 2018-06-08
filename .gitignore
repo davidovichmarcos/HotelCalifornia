@@ -24,6 +24,7 @@ Thumbs.db
 [Dd]ebug*/
 *.lib
 *.sbr
+*.idea/workspace.xml
 obj/
 [Rr]elease*/
 _ReSharper*/
