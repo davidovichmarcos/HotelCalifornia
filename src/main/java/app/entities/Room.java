@@ -16,12 +16,11 @@ public class Room {
     private double intakes;
 
 
-
-
-    /** Room Constructor 001
-     * @param id          The uuid must be unique.
-     * @param capacity    Cuantity of passangers this room can fit.
+    /**
+     * Room Constructor 001
      *
+     * @param id       The uuid must be unique.
+     * @param capacity Cuantity of passangers this room can fit.
      */
     public Room(Integer id, Integer capacity) {
         this.id = id;
@@ -34,6 +33,7 @@ public class Room {
         this.intakes = 0;
 
     }
+
     //// -----  GETTERS & SETTERS -------
     public Integer getId() {
         return id;
@@ -43,9 +43,13 @@ public class Room {
         this.id = id;
     }
 
-    public Integer getCapacity() { return capacity; }
+    public Integer getCapacity() {
+        return capacity;
+    }
 
-    public void setCapacity(Integer capacity) { this.capacity = capacity; }
+    public void setCapacity(Integer capacity) {
+        this.capacity = capacity;
+    }
 
     public IsAvailable isAvailable() {
         return isAvailable;
@@ -79,13 +83,21 @@ public class Room {
         this.finishDate = finishDate;
     }
 
-    public Passenger getGuest() {return guest; }
+    public Passenger getGuest() {
+        return guest;
+    }
 
-    public void setGuest(Passenger guest) { this.guest = guest; }
+    public void setGuest(Passenger guest) {
+        this.guest = guest;
+    }
 
-    public double getIntakes() { return intakes; }
+    public double getIntakes() {
+        return intakes;
+    }
 
-    public void setIntakes(double intakes) { this.intakes = intakes; }
+    public void setIntakes(double intakes) {
+        this.intakes = intakes;
+    }
 
     //// -----  FINISH GETTERS & SETTERS -------
 
@@ -99,7 +111,7 @@ public class Room {
     @Override
     public String toString() {
         if (this.isOcupated) {
-            return "Room :" + this.getId() + " Capacity: " + this.getCapacity() + "" + " Ocuppied: " + this.isOcupated() + " Guest: " + this.getGuest().getName() +" "+ this.getGuest().getLastName() + " From: " + this.getInitDate() + " To : " + this.getFinishDate();
+            return "Room :" + this.getId() + " Capacity: " + this.getCapacity() + "" + " Ocuppied: " + this.isOcupated() + " Guest: " + this.getGuest().getName() + " " + this.getGuest().getLastName() + " From: " + this.getInitDate() + " To : " + this.getFinishDate();
         } else {
             return "Room :" + this.getId() + " Capacity: " + this.getCapacity() + "" + " Ocuppied: " + this.isOcupated();
         }

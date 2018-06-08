@@ -14,6 +14,7 @@ public class Login {
 
     /**
      * Try to access to the system asking for valid users.
+     *
      * @param userImplementation The implementation of a user.
      */
 
@@ -42,6 +43,7 @@ public class Login {
 
     /**
      * Handle the users just before the login function, call the signIn method of each specific user.
+     *
      * @param userImpl The implementation of the user.
      */
     public void handleUsers(UserImplementation userImpl) {

@@ -8,7 +8,7 @@ import app.UserType;
 import java.util.Scanner;
 
 /**
- *  The class InputHelper.
+ * The class InputHelper.
  */
 public class InputHelper {
 

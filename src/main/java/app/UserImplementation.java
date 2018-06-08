@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- *  The class UserImplementation it handle all the common user methods.
+ * The class UserImplementation it handle all the common user methods.
  */
 public class UserImplementation implements User, Comparable {
     private String userName;
@@ -44,13 +44,13 @@ public class UserImplementation implements User, Comparable {
     }
 
     /**
-     *  SignIn the system as a valid user each other implementation of this interface must use this method.
+     * SignIn the system as a valid user each other implementation of this interface must use this method.
      *
      * @param userImplementation A userImplementation.
      * @return false if it's unauthorized, true if it's authorized.
      */
     @Override
-    public boolean signIn(UserImplementation userImplementation) throws UserNotValidException{
+    public boolean signIn(UserImplementation userImplementation) throws UserNotValidException {
         try {
             Set<UserImplementation> users = FileHelper.getUsersFromJson();
             for (User userCompare : users) {
@@ -102,7 +102,7 @@ public class UserImplementation implements User, Comparable {
         return false;
     }
 
-   @Override
+    @Override
     public int hashCode() {
         int result = String.valueOf(userName).hashCode();
         result = 31 * result + String.valueOf(password).hashCode();
@@ -113,9 +113,9 @@ public class UserImplementation implements User, Comparable {
     @Override
     public String toString() {
         String userImplString = new String();
-        userImplString = ("UserName: "+userName+"\t");
-        userImplString = userImplString +("Password: "+password+"\t");
-        userImplString = userImplString +("User Type: "+userType+"\t");
+        userImplString = ("UserName: " + userName + "\t");
+        userImplString = userImplString + ("Password: " + password + "\t");
+        userImplString = userImplString + ("User Type: " + userType + "\t");
         return userImplString;
     }
 }
