@@ -11,18 +11,22 @@ import java.awt.*;
  * The Class Login.
  */
 public class Login {
-    private boolean access;
 
     /**
      * Try to access to the system asking for valid users.
+     * @param userImplementation The implementation of a user.
      */
 
     public void logIn(UserImplementation userImplementation) {
-        while (!isValidUser(userImplementation)) {
-            System.out.println("User not valid asshole");
-            userImplementation = InputHelper.getUser();
+        try {
+            while (!isValidUser(userImplementation)) {
+                System.out.println("User not valid asshole");
+                userImplementation = InputHelper.getUser();
+            }
+            this.handleUsers(userImplementation);
+        } catch (UserNotValidException e) {
+            e.printStackTrace();
         }
-        this.handleUsers(userImplementation);
     }
 
     /**

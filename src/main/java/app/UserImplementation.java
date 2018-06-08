@@ -50,14 +50,17 @@ public class UserImplementation implements User, Comparable {
      * @return false if it's unauthorized, true if it's authorized.
      */
     @Override
-    public boolean signIn(UserImplementation userImplementation) {
-        Set<UserImplementation> users = FileHelper.getUsersFromJson();
-        for (User userCompare : users) {
-            if (userImplementation.equals(userCompare)) {
-                return true;
+    public boolean signIn(UserImplementation userImplementation) throws UserNotValidException{
+        try {
+            Set<UserImplementation> users = FileHelper.getUsersFromJson();
+            for (User userCompare : users) {
+                if (userImplementation.equals(userCompare)) {
+                    return true;
+                }
             }
+        } catch (UserNotValidException e) {
+            throw e;
         }
-
         return false;
     }
 
