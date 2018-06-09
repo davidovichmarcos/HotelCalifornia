@@ -15,6 +15,7 @@ public class Passenger extends Person implements User, Comparable {
     private String originAddress;
     private ArrayList<String> history = new ArrayList<String>();
 
+    public Passenger() {}
 
     public Passenger(String name, String lastName, Integer dni, String email, String address) {
         super(name, lastName, dni, email);

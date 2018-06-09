@@ -14,4 +14,9 @@
     "password": "admin",
     "userType": "ADMIN"
   }
+  {
+    "userName": "Victor",
+    "password": "admin",
+    "userType": "ADMIN"
+  }
 ]
