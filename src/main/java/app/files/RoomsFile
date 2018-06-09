@@ -2,13 +2,15 @@
   {
     "id": 1,
     "capacity": 2,
+    "roomType": "MATRIMONIAL",
     "isAvailable": "AVAILABLE",
     "isOcupated": false,
     "intakes": 0.0
   },
   {
     "id": 2,
-    "capacity": 2,
+    "capacity": 8,
+    "roomType": "SINGLE",
     "isAvailable": "AVAILABLE",
     "isOcupated": false,
     "intakes": 0.0
@@ -16,6 +18,211 @@
   {
     "id": 3,
     "capacity": 4,
+    "roomType": "MATRIMONIAL",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": true,
+    "initDate": {
+      "year": 2018,
+      "month": 6,
+      "day": 9
+    },
+    "finishDate": {
+      "year": 2018,
+      "month": 6,
+      "day": 19
+    },
+    "guest": {
+      "originAddress": "Bolivar 2474, Mar del Plata",
+      "name": "Daria",
+      "lastName": "Morgendorffer",
+      "email": "daria@pepe.com",
+      "dni": 66777888
+    },
+    "intakes": 0.0
+  },
+  {
+    "id": 4,
+    "capacity": 2,
+    "roomType": "SINGLE",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 5,
+    "capacity": 8,
+    "roomType": "MATRIMONIAL",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": true,
+    "initDate": {
+      "year": 2018,
+      "month": 6,
+      "day": 9
+    },
+    "finishDate": {
+      "year": 2018,
+      "month": 6,
+      "day": 16
+    },
+    "guest": {
+      "originAddress": "Moreno 2474, Mar del Plata",
+      "name": "Homer",
+      "lastName": "Simpson",
+      "email": "simpsons@pepe.com",
+      "dni": 99000111
+    },
+    "intakes": 0.0
+  },
+  {
+    "id": 6,
+    "capacity": 2,
+    "roomType": "SINGLE",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": true,
+    "initDate": {
+      "year": 2018,
+      "month": 6,
+      "day": 9
+    },
+    "finishDate": {
+      "year": 2018,
+      "month": 6,
+      "day": 15
+    },
+    "guest": {
+      "originAddress": "Alberti 2474, Mar del Plata",
+      "name": "Osama",
+      "lastName": "Bin Laden",
+      "email": "ala@pepe.com",
+      "dni": 66666666
+    },
+    "intakes": 0.0
+  },
+  {
+    "id": 7,
+    "capacity": 8,
+    "roomType": "MATRIMONIAL",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 8,
+    "capacity": 4,
+    "roomType": "SINGLE",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 9,
+    "capacity": 8,
+    "roomType": "MATRIMONIAL",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 10,
+    "capacity": 6,
+    "roomType": "SINGLE",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 11,
+    "capacity": 2,
+    "roomType": "MATRIMONIAL",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 12,
+    "capacity": 6,
+    "roomType": "SINGLE",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": true,
+    "initDate": {
+      "year": 2018,
+      "month": 6,
+      "day": 9
+    },
+    "finishDate": {
+      "year": 2018,
+      "month": 6,
+      "day": 16
+    },
+    "guest": {
+      "originAddress": "Falucho 2474, Mar del Plata",
+      "name": "Rick",
+      "lastName": "\u0026 Morty",
+      "email": "dimension@pepe.com",
+      "dni": 88999000
+    },
+    "intakes": 0.0
+  },
+  {
+    "id": 13,
+    "capacity": 8,
+    "roomType": "MATRIMONIAL",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 14,
+    "capacity": 6,
+    "roomType": "SINGLE",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 15,
+    "capacity": 2,
+    "roomType": "MATRIMONIAL",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 16,
+    "capacity": 6,
+    "roomType": "SINGLE",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 17,
+    "capacity": 6,
+    "roomType": "MATRIMONIAL",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 18,
+    "capacity": 6,
+    "roomType": "SINGLE",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 19,
+    "capacity": 8,
+    "roomType": "MATRIMONIAL",
+    "isAvailable": "AVAILABLE",
+    "isOcupated": false,
+    "intakes": 0.0
+  },
+  {
+    "id": 20,
+    "capacity": 6,
+    "roomType": "SINGLE",
     "isAvailable": "AVAILABLE",
     "isOcupated": false,
     "intakes": 0.0

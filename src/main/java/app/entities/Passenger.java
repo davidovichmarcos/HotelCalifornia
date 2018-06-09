@@ -5,6 +5,7 @@ import app.UserImplementation;
 import app.UserType;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 /**
  * The class Passenger.
@@ -12,9 +13,8 @@ import java.time.LocalDate;
  */
 public class Passenger extends Person implements User, Comparable {
     private String originAddress;
+    private ArrayList<String> history = new ArrayList<String>();
 
-    public Passenger() {
-    }
 
     public Passenger(String name, String lastName, Integer dni, String email, String address) {
         super(name, lastName, dni, email);
@@ -26,10 +26,20 @@ public class Passenger extends Person implements User, Comparable {
     }
 
     /**
-     * Charges an extra for the receipt.
+     *  Add a visit log into passenger history.
+     * @param log   String with visit details.
+     * @return  boolean
      */
-    public void consumeSomething() {
-        //ToDo
+    public boolean addHistory (String log){
+        return this.history.add(log);
+    }
+
+    /**
+     *  Get passenger History Array
+     * @return   ArrayList with History log.
+     */
+    public ArrayList<String> getHistory() {
+        return history;
     }
 
     @Override
@@ -39,6 +49,10 @@ public class Passenger extends Person implements User, Comparable {
         }
         return false;
     }
+
+    @Override
+    public String toString() {return super.toString()+ " Address: "+this.originAddress ; }
+
 
     @Override
     public boolean signOut() {

@@ -8,6 +8,7 @@ import java.time.LocalDate;
 public class Room {
     private Integer id;
     private Integer capacity;
+    private RoomType roomType;
     private IsAvailable isAvailable;
     private boolean isOcupated;
     private LocalDate initDate;
@@ -22,16 +23,16 @@ public class Room {
      * @param id       The uuid must be unique.
      * @param capacity Cuantity of passangers this room can fit.
      */
-    public Room(Integer id, Integer capacity) {
+    public Room(Integer id, Integer capacity, RoomType roomType) {
         this.id = id;
         this.capacity = capacity;
+        this.roomType = roomType;
         this.isAvailable = isAvailable.AVAILABLE;
         this.isOcupated = false;
         this.initDate = null;
         this.finishDate = null;
         this.guest = null;
         this.intakes = 0;
-
     }
 
     //// -----  GETTERS & SETTERS -------
@@ -50,6 +51,10 @@ public class Room {
     public void setCapacity(Integer capacity) {
         this.capacity = capacity;
     }
+
+    public RoomType getRoomType() { return roomType; }
+
+    public void setRoomType(RoomType roomType) { this.roomType = roomType;}
 
     public IsAvailable isAvailable() {
         return isAvailable;
@@ -111,9 +116,9 @@ public class Room {
     @Override
     public String toString() {
         if (this.isOcupated) {
-            return "Room :" + this.getId() + " Capacity: " + this.getCapacity() + "" + " Ocuppied: " + this.isOcupated() + " Guest: " + this.getGuest().getName() + " " + this.getGuest().getLastName() + " From: " + this.getInitDate() + " To : " + this.getFinishDate();
+            return "Room :" + this.getId() + " Capacity: " + this.getCapacity() + " Room type:  " + this.roomType + " Ocuppied: " + this.isOcupated() + " Guest: " + this.getGuest().getName() + " " + this.getGuest().getLastName() + " From: " + this.getInitDate() + " To : " + this.getFinishDate();
         } else {
-            return "Room :" + this.getId() + " Capacity: " + this.getCapacity() + "" + " Ocuppied: " + this.isOcupated();
+            return "Room :" + this.getId() + " Capacity: " + this.getCapacity() + " Room type: "+this.roomType + " Ocuppied: " + this.isOcupated();
         }
     }
 }

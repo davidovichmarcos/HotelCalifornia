@@ -4,7 +4,7 @@ public enum IsAvailable {
     CLEANING("Cleaning reason"),
     REPARATION("Reparation reason"),
     DISINFECTION("disinfection reason"),
-    AVAILABLE("Room is available");   /// agregue la base
+    AVAILABLE("Room is available");
 
 
     private String reason;
