@@ -14,7 +14,7 @@ import java.util.*;
 public class FileHelper {
 
 
-    private static String s = File.separator;
+    private static final String s = File.separator;
 
     File bookingsFile = new File("."+s+"src"+s+"main"+s+"java"+s+"app"+s+"files"+s+"BookingsFile");
 
