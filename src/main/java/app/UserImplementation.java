@@ -2,6 +2,7 @@ package app;
 
 import app.helpers.FileHelper;
 
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -12,6 +13,15 @@ public class UserImplementation implements User, Comparable {
     private String userName;
     private String password;
     private UserType userType;
+
+    public UserImplementation(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+        if (this.getUserTypeFromJson() != null) {
+            this.userType = this.getUserTypeFromJson();
+        }
+
+    }
 
     public UserImplementation(String userName, String password, UserType userType) {
         this.userName = userName;
@@ -25,6 +35,23 @@ public class UserImplementation implements User, Comparable {
 
     public void setUserType(UserType userType) {
         this.userType = userType;
+    }
+
+    /**
+     * Get the userType from the Json File when the username and password are right.
+     *
+     * @return the UserType of the User.
+     */
+    public UserType getUserTypeFromJson() {
+        Set<UserImplementation> users = FileHelper.getUsersFromJson();
+        for (UserImplementation user : users) {
+            if (user.getUserName().equals(this.getUserName())) {
+                if (user.getPassword().equals(this.getPassword())) {
+                    return user.getUserType();
+                }
+            }
+        }
+        return null;
     }
 
     public String getUserName() {
