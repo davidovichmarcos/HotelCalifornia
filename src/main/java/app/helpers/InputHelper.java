@@ -1,9 +1,8 @@
 package app.helpers;
 
-import app.User;
-import app.UserImplementation;
-import app.UserNotValidException;
-import app.UserType;
+import app.user.UserImplementation;
+import app.user.UserNotValidException;
+import app.user.UserType;
 
 import java.util.Scanner;
 

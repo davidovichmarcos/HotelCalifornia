@@ -1,7 +1,7 @@
 package app.helpers;
 
 
-import app.UserImplementation;
+import app.user.UserImplementation;
 import app.entities.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

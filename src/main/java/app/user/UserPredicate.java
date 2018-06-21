@@ -1,4 +1,6 @@
-package app;
+package app.user;
+
+import app.user.UserImplementation;
 
 /**
  * This functional interface is used to implement a lambda expression at the moment of validating

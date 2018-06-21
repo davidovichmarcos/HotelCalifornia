@@ -4,9 +4,10 @@ import app.entities.Admin;
 import app.entities.Employee;
 import app.entities.Passenger;
 import app.helpers.InputHelper;
-import app.view.AdminView;
-
-import java.awt.*;
+import app.user.UserImplementation;
+import app.user.UserNotValidException;
+import app.user.UserPredicate;
+import app.user.UserType;
 
 /**
  * The Class Login.
@@ -49,10 +50,6 @@ public class Login {
      */
     public void handleUsers(UserImplementation userImpl) {
         if (userImpl.getUserType().equals(UserType.ADMIN)) {
-            Admin admin = new Admin();
-            AdminView.display();
-
-            //admin.signIn(userImpl);
         } else if (userImpl.getUserType().equals(UserType.EMPLOYEE)) {
             Employee employee = new Employee();
             employee.signIn(userImpl);

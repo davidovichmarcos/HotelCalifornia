@@ -1,8 +1,8 @@
 package app.entities;
 
-import app.User;
-import app.UserImplementation;
-import app.UserType;
+import app.user.User;
+import app.user.UserImplementation;
+import app.user.UserType;
 
 /**
  * The class Employee.
