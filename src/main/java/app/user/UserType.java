@@ -1,4 +1,4 @@
-package app;
+package app.user;
 
 public enum UserType {
     ADMIN("Administrator"),

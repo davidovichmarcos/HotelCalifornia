@@ -1,10 +1,11 @@
 package app.entities;
 
-import app.User;
-import app.UserImplementation;
-import app.UserType;
+import app.user.User;
+import app.user.UserImplementation;
+import app.user.UserType;
 
 import java.util.*;
+import java.util.ArrayList;
 
 /**
  * The class Passenger.

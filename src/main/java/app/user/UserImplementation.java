@@ -1,10 +1,8 @@
-package app;
+package app.user;
 
 import app.helpers.FileHelper;
 
-import java.util.List;
 import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * The class UserImplementation it handle all the common user methods.
