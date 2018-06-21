@@ -19,13 +19,9 @@ public class Main extends Application {
         window = primaryStage;
         window.setTitle("Presentation");
         btnAccess = new Button("Access");
-
-
         VBox layout = new VBox(10);
         layout.getChildren().add(btnAccess);
-
         layout.setAlignment(Pos.CENTER);
-
         Scene scene = new Scene(layout, 800, 600);
         btnAccess.setOnAction(e -> {
             System.out.println("Access button");
