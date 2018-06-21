@@ -1,72 +1,58 @@
 package app.view;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.*;
+
+import app.Login;
+import app.UserImplementation;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.layout.GridPane;
+import javafx.scene.control.TextField;
+
 
 public class LoginView {
+    static TextField txtUserName;
+    static TextField txtPassword;
+    static Button btnLogin;
+    static Button btnCancel;
+    static boolean access;
+    public static Scene display() {
+        Scene scene;
+        txtUserName = new TextField("User Name");
+        txtPassword = new PasswordField();
+        txtPassword.setPromptText("Password");
+        btnLogin = new Button("Login");
+        btnCancel = new Button("Go Back!");
+        GridPane pane = new GridPane();
+        pane.setPadding(new Insets(10, 10, 10, 10));
+        pane.setVgap(8);
+        pane.setHgap(10);
 
+        GridPane.setConstraints(txtUserName, 3, 1);
+        GridPane.setConstraints(txtPassword, 3, 2);
+        GridPane.setConstraints(btnLogin, 3, 6);
+        GridPane.setConstraints(btnCancel, 4, 6);
+        pane.getChildren().addAll(txtUserName, txtPassword, btnLogin, btnCancel);
+        pane.setAlignment(Pos.CENTER);
+        scene = new Scene(pane, 800, 600);
+        btnLogin.setOnAction(e -> {
 
-    private boolean success;
+            Login login = new Login();
+            UserImplementation user = new UserImplementation(txtUserName.getText(), txtPassword.getText());
+            if (login.isValidUser(user)) {
+                access = true;
+                System.out.println("valid user");
+                login.handleUsers(user);
 
-    public LoginView(int x, int y, String title, boolean isVisible) {
-
-        JPanel panel = new JPanel(new GridBagLayout());
-        GridBagConstraints cs = new GridBagConstraints();
-
-        cs.fill = GridBagConstraints.HORIZONTAL;
-        final JLabel labelUsername = new JLabel("Username: ");
-        cs.gridx = 0;
-        cs.gridy = 0;
-        cs.gridwidth = 1;
-        panel.add(labelUsername, cs);
-
-        final JTextField textFieldUsername = new JTextField(20);
-        cs.gridx = 1;
-        cs.gridy = 0;
-        cs.gridwidth = 2;
-        panel.add(textFieldUsername, cs);
-
-        JLabel labelPassword = new JLabel("Password: ");
-        cs.gridx = 0;
-        cs.gridy = 1;
-        cs.gridwidth = 1;
-        panel.add(labelPassword, cs);
-
-        final JTextField textFieldPassword = new JPasswordField(20);
-        cs.gridx = 1;
-        cs.gridy = 1;
-        panel.add(textFieldPassword, cs);
-
-        JButton loginBtn = new JButton("Log in!");
-        cs.gridx = 1;
-        cs.gridy = 2;
-        panel.add(loginBtn, cs);
-
-
-        loginBtn.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                //Descomentar cuando este el metodo que valide los usuarios del archivo.
-                /*if (){
-
-                    success = true;
-                }else {
-                    textFieldPassword.setText("");
-                    textFieldUsername.setText("");
-                    success = false;
-                }*/
+            } else {
+                System.out.println("User Not Valid");
             }
+            txtUserName.clear();
+            txtUserName.setPromptText("User Name");
+            txtPassword.clear();
         });
-
-        new WindowBase(x, y, title, isVisible, panel);
-    }
-
-    public boolean isSuccess() {
-        return success;
-    }
-
-    public void setSuccess(boolean success) {
-        this.success = success;
+        return scene;
     }
 }
