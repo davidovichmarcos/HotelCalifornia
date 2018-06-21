@@ -1,7 +1,7 @@
 package app.view;
 
 
-import app.Login;
+import app.user.Login;
 import app.Main;
 import app.user.UserImplementation;
 import javafx.geometry.Insets;
@@ -24,7 +24,6 @@ public class LoginView {
     static Label lblWrongUser;
 
     public static Scene display(Stage window) {
-        Scene scene;
         txtUserName = new TextField("User Name");
         txtPassword = new PasswordField();
         txtPassword.setPromptText("Password");
@@ -32,21 +31,14 @@ public class LoginView {
         btnCancel = new Button("Go Back!");
         lblWrongUser = new Label("Wrong User!");
         lblWrongUser.setVisible(false);
-        GridPane pane = new GridPane();
-        pane.setPadding(new Insets(10, 10, 10, 10));
-        pane.setVgap(8);
-        pane.setHgap(10);
-
-        GridPane.setConstraints(txtUserName, 3, 1);
-        GridPane.setConstraints(txtPassword, 3, 2);
-        GridPane.setConstraints(btnLogin, 3, 7);
-        GridPane.setConstraints(btnCancel, 4, 7);
-        GridPane.setConstraints(lblWrongUser, 3, 6);
-        pane.getChildren().addAll(txtUserName, txtPassword, btnLogin, btnCancel, lblWrongUser);
-        pane.setAlignment(Pos.CENTER);
-        scene = new Scene(pane, 800, 600);
+        /** Building the Scene and his respective pane.
+         */
+        GridPane pane = buildPane();
+        Scene scene = new Scene(pane, 800, 600);
+        /**
+         *  The login button functionality.
+         */
         btnLogin.setOnAction(e -> {
-
             Login login = new Login();
             UserImplementation user = new UserImplementation(txtUserName.getText(), txtPassword.getText());
             if (login.isValidUser(user)) {
@@ -62,6 +54,9 @@ public class LoginView {
             txtUserName.setPromptText("User Name");
             txtPassword.clear();
         });
+        /**
+         *  The Go Back button functionality.
+         */
         btnCancel.setOnAction(e -> {
             Main main = new Main();
             try {
@@ -71,6 +66,27 @@ public class LoginView {
             }
         });
         return scene;
+    }
+
+    /**
+     * Buil the LoginView pane.
+     *
+     * @return The GridPane to the display method.
+     */
+    public static GridPane buildPane() {
+        GridPane pane = new GridPane();
+        pane.setPadding(new Insets(10, 10, 10, 10));
+        pane.setVgap(8);
+        pane.setHgap(10);
+
+        GridPane.setConstraints(txtUserName, 3, 1);
+        GridPane.setConstraints(txtPassword, 3, 2);
+        GridPane.setConstraints(btnLogin, 3, 7);
+        GridPane.setConstraints(btnCancel, 4, 7);
+        GridPane.setConstraints(lblWrongUser, 3, 6);
+        pane.getChildren().addAll(txtUserName, txtPassword, btnLogin, btnCancel, lblWrongUser);
+        pane.setAlignment(Pos.CENTER);
+        return pane;
     }
 
 }
