@@ -1,34 +1,45 @@
 package app;
 
-import app.view.LoginView;
+import java.io.IOException;
+
+import app.controller.LoginController;
+import app.controller.MainController;
 import javafx.application.Application;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 
 public class Main extends Application {
+	
     private Stage window;
-    Button btnAccess;
+   
+    Parent root;
+    AnchorPane pane;
 
-    @Override
+    static MainController myControllerHandle;
+
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
+    
+	@Override
     public void start(Stage primaryStage) throws Exception {
-
-        window = primaryStage;
-        window.setTitle("Presentation");
-        btnAccess = new Button("Access");
-        VBox layout = new VBox(10);
-        layout.getChildren().add(btnAccess);
-        layout.setAlignment(Pos.CENTER);
-        Scene scene = new Scene(layout, 800, 600);
-        btnAccess.setOnAction(e -> {
-            System.out.println("Access button");
-            window.setScene(LoginView.display(window));
-
-        });
-        window.setScene(scene);
+		window = primaryStage;
+		FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("/fxml/main.fxml"));
+        AnchorPane login = (AnchorPane) loader.load();
+        window.setTitle("Welcome");
+        window.setScene(new Scene(login, 800, 600));
         window.show();
     }
+	
+	
 }
