@@ -27,6 +27,15 @@ public class Hotel {
      * @return    (Integer) Amount of rooms.
      */
     public Integer getHotelSize (){ return this.rooms.size();}
+
+    /**
+     * Returns if an integer is a valid Room Id.
+     * @param i
+     * @return
+     */
+    public boolean isValidRoomId(Integer i) {
+        return i>0&&i<=getHotelSize();
+    }
     /**
      *  Returns the amount of Passengers in the collection.
      * @return    (Integer) Amount of passengers.
@@ -177,7 +186,7 @@ public class Hotel {
             Booking bAux;
             while (iterator.hasNext()) {
                 bAux = iterator.next();
-                if (bAux.getPassenger().equals(p)) {
+                if (bAux.getPassenger().getDni().equals(p.getDni())) {
                     books.add(bAux);
                 }
             }
@@ -233,9 +242,10 @@ public class Hotel {
      * @param p    Passenger who takes the room.
      * @param room Number (id) of the room to do the check in to.
      * @param days Amount of days the passenger will stay in.
+     * @return boolean
+     *
      */
-    public void checkIn(Passenger p, Integer room, Integer days) {
-        // check if the room is reservated.
+    public boolean checkIn(Passenger p, Integer room, Integer days) {
         room--;
         if (!(rooms.get(room).isOcupated())) {
             Room roomAux = rooms.get(room);
@@ -244,8 +254,9 @@ public class Hotel {
             roomAux.setInitDate(LocalDate.now());
             roomAux.setFinishDate(LocalDate.now().plusDays(days));
             rooms.set(room, roomAux);
+            return true;
         } else {
-            System.out.println("HABITACION OCUPADA.");
+            return false;
         }
     }
 

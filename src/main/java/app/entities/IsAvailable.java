@@ -1,10 +1,10 @@
 package app.entities;
 
 public enum IsAvailable {
-    CLEANING("Cleaning reason"),
-    REPARATION("Reparation reason"),
-    DISINFECTION("disinfection reason"),
-    AVAILABLE("Room is available");
+    CLEANING("Cleaning"),
+    REPARATION("Under Maintenance"),
+    DISINFECTION("Under Desinfection"),
+    AVAILABLE("Room is AVAILABLE");
 
 
     private String reason;

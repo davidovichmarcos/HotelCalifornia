@@ -4,8 +4,7 @@ import app.User;
 import app.UserImplementation;
 import app.UserType;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * The class Passenger.
@@ -39,7 +38,7 @@ public class Passenger extends Person implements User, Comparable {
      *  Get passenger History Array
      * @return   ArrayList with History log.
      */
-    public ArrayList<String> getHistory() {
+    public List<String> getHistory() {
         return history;
     }
 
