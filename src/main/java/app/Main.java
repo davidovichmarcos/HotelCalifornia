@@ -33,13 +33,17 @@ public class Main extends Application {
 	@Override
     public void start(Stage primaryStage) throws Exception {
 		window = primaryStage;
+		
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("/fxml/main.fxml"));
         AnchorPane login = (AnchorPane) loader.load();
         window.setTitle("Welcome");
-        window.setScene(new Scene(login, 800, 600));
+        window.setScene(new Scene(login));
+        window.sizeToScene();
+        window.setResizable(false); 
+        
         window.show();
-    }
+	}
 	
 	
 }

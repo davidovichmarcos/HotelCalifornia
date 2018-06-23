@@ -92,6 +92,7 @@ public class LoginController {
     
     @FXML
     public void btnCancelPressed(ActionEvent event) throws IOException {
+    	System.out.println("btn cancel pressed");
     	Stage window = (Stage) btnLogin.getScene().getWindow();
     	FXMLLoader loginLoader = new FXMLLoader();
  	   	loginLoader.setLocation(Main.class.getResource("/fxml/main.fxml"));
