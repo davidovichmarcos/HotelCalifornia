@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:controller="app.controller.MainController" id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <ImageView id="mardel" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+      <image>
+        <Image url="@../mardel.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Button fx:id="btnAccess" onAction="#btnAccessPressed" layoutX="669.0" layoutY="512.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="Access" textFill="#66a3ff">
+      <font>
+        <Font name="System Bold" size="20.0" />
+      </font>
+    </Button>
+    <Label layoutX="14.0" layoutY="53.0" prefHeight="57.0" prefWidth="436.0" text="Hotel California" textFill="#663100" textOverrun="ELLIPSIS">
+      <font>
+        <Font name="Lucida Sans Demibold" size="30.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>
