@@ -51,7 +51,6 @@ public class LoginController {
     	System.out.println("btn login pressed");
     	Stage window = (Stage) btnLogin.getScene().getWindow();
     	Login login = new Login();
-    	
     	UserImplementation user = new UserImplementation(txtUserName.getText(), txtPassword.getText());
     	if (login.isValidUser(user)) {
 			System.out.println("Valid User");
