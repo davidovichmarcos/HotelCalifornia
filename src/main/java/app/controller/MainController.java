@@ -51,20 +51,19 @@ public class MainController {
     }
     @FXML
     public void btnAccessPressed(ActionEvent event) throws IOException {
-    	System.out.println("btn access pressed");
-    	
-    	// Swap screen
-    	Stage window = (Stage) btnAccess.getScene().getWindow();
-    	FXMLLoader loginLoader = new FXMLLoader();
- 	   	loginLoader.setLocation(Main.class.getResource("/fxml/LoginView.fxml"));
+        System.out.println("btn access pressed");
+
+        // Swap screen
+        Stage window = (Stage) btnAccess.getScene().getWindow();
+        FXMLLoader loginLoader = new FXMLLoader();
+        loginLoader.setLocation(Main.class.getResource("/fxml/LoginView.fxml"));
         AnchorPane login = (AnchorPane) loginLoader.load();
         Scene scene = new Scene(login);
         window.setTitle("Login");
- 	   	window.setScene(scene);
- 	   	window.show();
-    	
+        window.setScene(scene);
+        window.show();
+
     }
-    
  
 }
 

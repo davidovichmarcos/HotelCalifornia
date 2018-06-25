@@ -1,8 +1,10 @@
 package app.controller;
 
+import app.entities.Room;
 import javafx.event.ActionEvent;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.TreeSet;
@@ -11,21 +13,27 @@ import app.Main;
 import app.helpers.FileHelper;
 import app.user.UserImplementation;
 import app.user.UserType;
+import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ComboBox;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
+/**
+ *  The Admin Controller class.
+ */
 public class AdminController {
+    /**
+     * All the component from the view.
+     */
     @FXML
     private Label lblUserCreated;
+    @FXML
+    private Label lblWrongUserModified;
     @FXML
     private ComboBox cmbUserType;
     @FXML
@@ -33,15 +41,25 @@ public class AdminController {
     @FXML
     private TextField txtPassword;
     @FXML
+    private TextField txtUserNameModified;
+    @FXML
+    private PasswordField txtPasswordModified;
+    @FXML
     private Button btnCancel;
+    @FXML
+    private Button btnModifyUser;
     @FXML
     private AnchorPane paneCreateUser;
     @FXML
     private GridPane gridRoomsPane;
     @FXML
+    private AnchorPane presentationPane;
+    @FXML
+    private AnchorPane modifyPermissionsPane;
+    @FXML
     private Label lblRoom1, lblRoom2, lblRoom3, lblRoom4, lblRoom5, lblRoom6,
-            lblRoom7, lblRoom8, lblRoom9, lblRoom10,lblRoom11,lblRoom12,lblRoom13,
-            lblRoom14,lblRoom15,lblRoom16,lblRoom17,lblRoom18,lblRoom19,lblRoom20;
+            lblRoom7, lblRoom8, lblRoom9, lblRoom10, lblRoom11, lblRoom12, lblRoom13,
+            lblRoom14, lblRoom15, lblRoom16, lblRoom17, lblRoom18, lblRoom19, lblRoom20;
 
 
     @FXML
@@ -50,16 +68,27 @@ public class AdminController {
     @FXML
     private ResourceBundle resources;
 
-    // Add a public no-args constructor
+    /**
+     * Add a public no-args constructor
+     */
+
     public AdminController() {
         // TODO Auto-generated constructor stub
     }
 
+    /**
+     * Required method by JavaFX.
+     */
     @FXML
     private void initialize() {
 
     }
 
+    /**
+     * Go back to the login view.
+     *
+     * @param event the ActionEvent to the view.
+     */
     @FXML
     private void btnCancelPressed(ActionEvent event) {
         try {
@@ -77,24 +106,78 @@ public class AdminController {
         }
     }
 
+    /**
+     * Shows the Rooms and the status of each one.
+     *
+     * @param event the ActionEvent to the view.
+     */
     @FXML
     private void btnShowRoomsPressed(ActionEvent event) {
         System.out.println("btn Showrooms pressed");
+        setAllPanesNotVisible();
         gridRoomsPane.setVisible(true);
-        lblRoom1.setText(RoomController.settLblRoomsStatus());
-        paneCreateUser.setVisible(false);
+        ArrayList<Label> lblrooms = new ArrayList<>();
+        lblrooms.add(lblRoom1);
+        lblrooms.add(lblRoom2);
+        lblrooms.add(lblRoom3);
+        lblrooms.add(lblRoom4);
+        lblrooms.add(lblRoom5);
+        lblrooms.add(lblRoom6);
+        lblrooms.add(lblRoom7);
+        lblrooms.add(lblRoom8);
+        lblrooms.add(lblRoom9);
+        lblrooms.add(lblRoom10);
+        lblrooms.add(lblRoom11);
+        lblrooms.add(lblRoom12);
+        lblrooms.add(lblRoom13);
+        lblrooms.add(lblRoom14);
+        lblrooms.add(lblRoom15);
+        lblrooms.add(lblRoom16);
+        lblrooms.add(lblRoom17);
+        lblrooms.add(lblRoom18);
+        lblrooms.add(lblRoom19);
+        lblrooms.add(lblRoom20);
+        RoomController.settLblRoomsStatus(lblrooms);
 
     }
 
+    /**
+     * Shows the Create users view.
+     *
+     * @param event the ActionEvent to the view.
+     */
     @FXML
     private void btnCreateUserPressed(ActionEvent event) {
         System.out.println("btn create user pressed");
-        gridRoomsPane.setVisible(false);
+        setAllPanesNotVisible();
         paneCreateUser.setVisible(true);
-        lblUserCreated.setVisible(false);
 
     }
+    @FXML
+    private void btnModifyPermissionsPressed() {
+        System.out.println("btn modify permissions pressed");
+        setAllPanesNotVisible();
+        modifyPermissionsPane.setVisible(true);
+    }
+    @FXML
+    private void btnModifyUserPressed() {
+        System.out.println("btn modify user pressed");
+        if (!txtUserNameModified.getText().isEmpty()) {
+            if (!txtPasswordModified.getText().isEmpty()) {
+                UserImplementation user = new UserImplementation(txtUserNameModified.getText(), txtPasswordModified.getText());
 
+            }
+        } else {
+            lblWrongUserModified.setVisible(true);
+        }
+    }
+
+
+    /**
+     * Shows the label wich says if the users ir wrong or not.
+     *
+     * @param event the ActionEvent to the view.
+     */
     @FXML
     private void btnCreatePressed(ActionEvent event) {
         UserImplementation user = null;
@@ -136,5 +219,15 @@ public class AdminController {
             lblUserCreated.setVisible(true);
         }
 
+    }
+
+    /**
+     * Set all the panes not visible at first, all the panes must be added.
+     */
+    private void setAllPanesNotVisible() {
+        paneCreateUser.setVisible(false);
+        gridRoomsPane.setVisible(false);
+        presentationPane.setVisible(false);
+        modifyPermissionsPane.setVisible(false);
     }
 }

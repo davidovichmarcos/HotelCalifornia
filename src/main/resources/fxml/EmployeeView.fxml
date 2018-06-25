@@ -1,19 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="app.controller.EmployeeController">
   <children>
-    <SplitPane dividerPositions="0.22431077694235588" focusTraversable="true" layoutX="0.0" layoutY="-1.0" prefHeight="601.0" prefWidth="800.0">
-      <items>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: lightblue;">
+    <GridPane layoutX="0.0" layoutY="1.0" prefHeight="599.0" prefWidth="800.0">
+      <children>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: grey" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <AnchorPane id="presentationPane" layoutX="11.0" layoutY="8.0" prefHeight="600.9999000000025" prefWidth="811.0" visible="true">
+              <children>
+                <ImageView id="IMG_1590" fx:id="initialPane" fitHeight="601.0" fitWidth="799.9999000000025" layoutX="-11.0" layoutY="-10.0" pickOnBounds="true">
+                  <image>
+                    <Image url="@../img/IMG_1590.JPG" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+                <Label layoutX="178.0" layoutY="24.0" text="Press any button" textFill="#7266ff">
+                  <font>
+                    <Font name="System Bold" size="40.0" />
+                  </font>
+                </Label>
+              </children>
+            </AnchorPane>
+            <AnchorPane layoutX="0.0" layoutY="-2.0" minHeight="0.0" minWidth="0.0" prefHeight="601.0" prefWidth="635.0" style="">
+              <children>
+                <GridPane fx:id="gridRoomsPane" layoutX="176.0" layoutY="0.0" prefHeight="602.0" prefWidth="624.0" style="-fx-background-color: grey;" visible="false">
+                  <children>
+                    <Label fx:id="lblRoom17" alignment="TOP_LEFT" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                      <font>
+                        <Font size="11.0" fx:id="x3" />
+                      </font>
+                      <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x2" />
+                      </GridPane.margin>
+                    </Label>
+                    <Label fx:id="lblRoom18" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="2" GridPane.margin="$x2" GridPane.rowIndex="3" />
+                    <Label fx:id="lblRoom16" alignment="TOP_LEFT" font="$x3" prefHeight="150.0" prefWidth="124.0" text="Label" wrapText="false" GridPane.columnIndex="0" GridPane.margin="$x2" GridPane.rowIndex="3" />
+                    <Label fx:id="lblRoom6" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="0" GridPane.margin="$x2" GridPane.rowIndex="1" />
+                    <Label fx:id="lblRoom11" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="0" GridPane.margin="$x2" GridPane.rowIndex="2" />
+                    <Label fx:id="lblRoom12" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="1" GridPane.margin="$x2" GridPane.rowIndex="2" />
+                    <Label fx:id="lblRoom13" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="2" GridPane.margin="$x2" GridPane.rowIndex="2" />
+                    <Label fx:id="lblRoom19" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="3" GridPane.margin="$x2" GridPane.rowIndex="3" />
+                    <Label fx:id="lblRoom14" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="3" GridPane.margin="$x2" GridPane.rowIndex="2" />
+                    <Label fx:id="lblRoom20" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="4" GridPane.margin="$x2" GridPane.rowIndex="3" />
+                    <Label fx:id="lblRoom15" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="4" GridPane.margin="$x2" GridPane.rowIndex="2" />
+                    <Label fx:id="lblRoom10" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="4" GridPane.margin="$x2" GridPane.rowIndex="1" />
+                    <Label fx:id="lblRoom5" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="4" GridPane.margin="$x2" GridPane.rowIndex="0" />
+                    <Label fx:id="lblRoom4" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="3" GridPane.margin="$x2" GridPane.rowIndex="0" />
+                    <Label fx:id="lblRoom9" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="3" GridPane.margin="$x2" GridPane.rowIndex="1" />
+                    <Label fx:id="lblRoom3" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="2" GridPane.margin="$x2" GridPane.rowIndex="0" />
+                    <Label fx:id="lblRoom8" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="2" GridPane.margin="$x2" GridPane.rowIndex="1" />
+                    <Label fx:id="lblRoom7" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="1" GridPane.margin="$x2" GridPane.rowIndex="1" />
+                    <Label fx:id="lblRoom2" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="1" GridPane.margin="$x2" GridPane.rowIndex="0" />
+                    <Label fx:id="lblRoom1" alignment="TOP_LEFT" font="$x3" prefHeight="180.0" prefWidth="137.0" text="Label" wrapText="false" GridPane.columnIndex="0" GridPane.margin="$x2" GridPane.rowIndex="0" />
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+              </children>
+            </AnchorPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.9999000000025" prefWidth="175.99990000000253" style="-fx-background-color: lightblue;" GridPane.columnIndex="0" GridPane.rowIndex="0">
           <children>
             <GridPane layoutX="0.0" layoutY="0.0" prefHeight="266.0" prefWidth="186.0">
               <children>
-                <Button fx:id="btnShowRooms" graphicTextGap="2.0" minHeight="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: transparent;" text="Show Rooms" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Button fx:id="btnShowRooms" graphicTextGap="2.0" minHeight="30.0" mnemonicParsing="false" onAction="#btnShowRoomsPressed" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: transparent;" text="Show Rooms" GridPane.columnIndex="0" GridPane.rowIndex="0">
                   <font>
                     <Font name="System Bold" size="15.0" fx:id="x1" />
                   </font>
@@ -38,52 +106,14 @@
             </GridPane>
           </children>
         </AnchorPane>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: grey">
-          <children>
-            <AnchorPane layoutX="0.0" layoutY="-2.0" minHeight="0.0" minWidth="0.0" prefHeight="601.0" prefWidth="635.0" style="-fx-background-color: grey">
-              <children>
-                <GridPane fx:id="gridRoomsPane" layoutX="0.0" layoutY="0.0" prefHeight="356.0" prefWidth="616.0" visible="false">
-                  <children>
-                    <Button fx:id="btnRoom1" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 1" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
-                    <Button fx:id="btnRoom2" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 2" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
-                    <Button fx:id="btnRoom3" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 3" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
-                    <Button fx:id="btnRoom4" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 4" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
-                    <Button fx:id="btnRoom5" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 5" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
-                    <Button fx:id="btnRoom6" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 6" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                    <Button fx:id="btnRoom7" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 7" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                    <Button fx:id="btnRoom8" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 8" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                    <Button fx:id="btnRoom9" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 9" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                    <Button fx:id="btnRoom10" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 10" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                    <Button fx:id="btnRoom11" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 11" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                    <Button fx:id="btnRoom12" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 12" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                    <Button fx:id="btnRoom13" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 13" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                    <Button fx:id="btnRoom14" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 14" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                    <Button fx:id="btnRoom15" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 15" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                    <Button fx:id="btnRoom16" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 16" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-                    <Button fx:id="btnRoom17" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 17" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-                    <Button fx:id="btnRoom18" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 18" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-                    <Button fx:id="btnRoom19" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 19" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-                    <Button fx:id="btnRoom20" font="$x1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Room 20" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-                  </children>
-                  <columnConstraints>
-                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  </columnConstraints>
-                  <rowConstraints>
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  </rowConstraints>
-                </GridPane>
-              </children>
-            </AnchorPane>
-          </children>
-        </AnchorPane>
-      </items>
-    </SplitPane>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="399.0" minWidth="10.0" prefWidth="176.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="642.0" minWidth="10.0" prefWidth="624.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
   </children>
 </AnchorPane>

@@ -116,9 +116,9 @@ public class Room {
     @Override
     public String toString() {
         if (this.isOcupated) {
-            return " Room: " + this.getId() + "\n Capacity: " + this.getCapacity() + "\n Type:  " + this.roomType + "\n Status: "+this.isAvailable.getReason()+ "\n Ocuppied: " + this.isOcupated() + " Guest: " + this.getGuest().getName() + " " + this.getGuest().getLastName() + " From: " + this.getInitDate() + " To : " + this.getFinishDate();
+            return "Room: " + this.getId() + "\nCapacity: " + this.getCapacity() + "\n" + this.roomType + "\n"+this.isAvailable.getReason()+ "\nOcuppied: " + this.isOcupated() + "\nGuest: " + this.getGuest().getName() +this.getGuest().getLastName() + "\nFrom: " + this.getInitDate() + "\nTo : " + this.getFinishDate();
         } else {
-            return " Room: " + this.getId() + "\n Capacity: " + this.getCapacity() + "\n Type: "+this.roomType +"\n Status: "+this.isAvailable.getReason()+  "\n Ocuppied: " + this.isOcupated();
+            return "Room: " + this.getId() + "\nCapacity: " + this.getCapacity() + "\n"+this.roomType +"\n "+this.isAvailable.getReason()+  "\nOcuppied: " + this.isOcupated();
         }
     }
 }
