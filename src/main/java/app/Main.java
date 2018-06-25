@@ -22,7 +22,11 @@ public class Main extends Application {
     public static void main(String[] args) {
         Application.launch(args);
     }
-    
+
+    /** Start The javaFX application.
+     * @param primaryStage the OS window.
+     * @throws Exception
+     */
 	@Override
     public void start(Stage primaryStage) throws Exception {
 		window = primaryStage;
@@ -33,8 +37,7 @@ public class Main extends Application {
         window.setScene(new Scene(login));
         window.sizeToScene();
         window.getIcons().add(new Image("/img/icon.png"));
-        window.setResizable(false); 
-        
+        window.setResizable(false);
         window.show();
 	}
 }
