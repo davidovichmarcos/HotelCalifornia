@@ -50,6 +50,8 @@ public class Login {
      */
     public void handleUsers(UserImplementation userImpl) {
         if (userImpl.getUserType().equals(UserType.ADMIN)) {
+            Admin admin = new Admin();
+            admin.signIn(userImpl);
         } else if (userImpl.getUserType().equals(UserType.EMPLOYEE)) {
             Employee employee = new Employee();
             employee.signIn(userImpl);
