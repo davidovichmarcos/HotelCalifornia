@@ -1,5 +1,7 @@
 package app.controller;
+
 import javafx.event.ActionEvent;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -15,11 +17,11 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 /**
- *  The PassengerController class.
+ * The PassengerController class.
  */
 public class PassengerController {
-	@FXML
-	private Button btnCancel;
+    @FXML
+    private Button btnCancel;
 
     @FXML
     private URL location;
@@ -30,8 +32,9 @@ public class PassengerController {
 
     // Add a public no-args constructor
     public PassengerController() {
-		// TODO Auto-generated constructor stub
-	}
+        // TODO Auto-generated constructor stub
+    }
+
     @FXML
     private void initialize() {
 
@@ -39,24 +42,24 @@ public class PassengerController {
 
     /**
      * Go back to the login view.
+     *
      * @param event the ActionEvent to the view.
      */
     @FXML
     private void btnCancelPressed(ActionEvent event) {
-    	try
-    	{
-    	System.out.println("btn Cancel Pressed");
-    	Stage window = (Stage) btnCancel.getScene().getWindow();
-    	FXMLLoader loginLoader = new FXMLLoader();
- 	   	loginLoader.setLocation(Main.class.getResource("/fxml/LoginView.fxml"));
-        AnchorPane loginPane = (AnchorPane) loginLoader.load();
-        Scene scene = new Scene(loginPane);
-        window.setTitle("Login");
-        window.setScene(scene);
- 	   	window.show();
-    	} catch (Exception e) {
-			new Exception("Cannot load the LoginView.fxml");
-		}
+        try {
+            System.out.println("btn Cancel Pressed");
+            Stage window = (Stage) btnCancel.getScene().getWindow();
+            FXMLLoader loginLoader = new FXMLLoader();
+            loginLoader.setLocation(Main.class.getResource("/fxml/LoginView.fxml"));
+            AnchorPane loginPane = (AnchorPane) loginLoader.load();
+            Scene scene = new Scene(loginPane);
+            window.setTitle("Login");
+            window.setScene(scene);
+            window.show();
+        } catch (Exception e) {
+            new Exception("Cannot load the LoginView.fxml");
+        }
     }
-   
+
 }

@@ -28,10 +28,10 @@ import app.Main;
 
 
 /**
- *  The MainController Class.
+ * The MainController Class.
  */
 public class MainController {
-	@SuppressWarnings("unused")
+    @SuppressWarnings("unused")
     private Main mainApp;
     @FXML
     private Button btnAccess;
@@ -49,12 +49,13 @@ public class MainController {
 
     @FXML
     private void initialize() {
-    	
-    	
+
+
     }
 
     /**
      * Access to the LoginView.
+     *
      * @param event the ActionEvent to the view.
      * @throws IOException iOException.
      */
@@ -72,6 +73,6 @@ public class MainController {
         window.show();
 
     }
- 
+
 }
 

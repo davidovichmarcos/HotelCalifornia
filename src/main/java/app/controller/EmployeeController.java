@@ -1,5 +1,7 @@
 package app.controller;
+
 import javafx.event.ActionEvent;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -16,13 +18,13 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 /**
- *  The EmployeeController class.
+ * The EmployeeController class.
  */
 public class EmployeeController {
-	@FXML
-	private Button btnCancel;
-	@FXML
-	private GridPane gridRoomsPane;
+    @FXML
+    private Button btnCancel;
+    @FXML
+    private GridPane gridRoomsPane;
     @FXML
     private Label lblRoom1, lblRoom2, lblRoom3, lblRoom4, lblRoom5, lblRoom6,
             lblRoom7, lblRoom8, lblRoom9, lblRoom10, lblRoom11, lblRoom12, lblRoom13,
@@ -37,33 +39,36 @@ public class EmployeeController {
 
     // Add a public no-args constructor
     public EmployeeController() {
-		// TODO Auto-generated constructor stub
-	}
+        // TODO Auto-generated constructor stub
+    }
+
     @FXML
     private void initialize() {
 
     }
 
-    /** Go back to the login view.
+    /**
+     * Go back to the login view.
+     *
      * @param event the ActionEvent to the view.
      */
     @FXML
     private void btnCancelPressed(ActionEvent event) {
-    	try
-    	{
-    	System.out.println("btn Cancel Pressed");
-    	Stage window = (Stage) btnCancel.getScene().getWindow();
-    	FXMLLoader loginLoader = new FXMLLoader();
- 	   	loginLoader.setLocation(Main.class.getResource("/fxml/LoginView.fxml"));
-        AnchorPane loginPane = (AnchorPane) loginLoader.load();
-        Scene scene = new Scene(loginPane);
-        window.setTitle("Login");
-        window.setScene(scene);
- 	   	window.show();
-    	} catch (Exception e) {
-			new Exception("Cannot load the LoginView.fxml");
-		}
+        try {
+            System.out.println("btn Cancel Pressed");
+            Stage window = (Stage) btnCancel.getScene().getWindow();
+            FXMLLoader loginLoader = new FXMLLoader();
+            loginLoader.setLocation(Main.class.getResource("/fxml/LoginView.fxml"));
+            AnchorPane loginPane = (AnchorPane) loginLoader.load();
+            Scene scene = new Scene(loginPane);
+            window.setTitle("Login");
+            window.setScene(scene);
+            window.show();
+        } catch (Exception e) {
+            new Exception("Cannot load the LoginView.fxml");
+        }
     }
+
     /**
      * Shows the Rooms and the status of each one.
      *
@@ -98,6 +103,7 @@ public class EmployeeController {
         RoomController.settLblRoomsStatus(lblrooms);
 
     }
+
     public void setAllPanesNotVisible() {
         gridRoomsPane.setVisible(false);
     }
