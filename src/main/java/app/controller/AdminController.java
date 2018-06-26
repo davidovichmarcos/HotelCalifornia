@@ -24,7 +24,7 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 /**
- *  The Admin Controller class.
+ * The Admin Controller class.
  */
 public class AdminController {
     /**
@@ -36,6 +36,8 @@ public class AdminController {
     private Label lblWrongUserModified;
     @FXML
     private ComboBox cmbUserType;
+    @FXML
+    private ComboBox cmbUserTypeModified;
     @FXML
     private TextField txtUserName;
     @FXML
@@ -150,24 +152,58 @@ public class AdminController {
     private void btnCreateUserPressed(ActionEvent event) {
         System.out.println("btn create user pressed");
         setAllPanesNotVisible();
+        lblUserCreated.setVisible(false);
         paneCreateUser.setVisible(true);
 
     }
+
     @FXML
     private void btnModifyPermissionsPressed() {
         System.out.println("btn modify permissions pressed");
         setAllPanesNotVisible();
+        lblWrongUserModified.setVisible(false);
         modifyPermissionsPane.setVisible(true);
     }
+
     @FXML
     private void btnModifyUserPressed() {
         System.out.println("btn modify user pressed");
-        if (!txtUserNameModified.getText().isEmpty()) {
-            if (!txtPasswordModified.getText().isEmpty()) {
-                UserImplementation user = new UserImplementation(txtUserNameModified.getText(), txtPasswordModified.getText());
+        TreeSet<UserImplementation> users = new TreeSet<>();
+        UserImplementation userModified = null;
+        users.addAll(FileHelper.getUsersFromJson());
+        TreeSet<UserImplementation> usersModify = new TreeSet<>();
+        boolean validUser = false;
+        for (UserImplementation user : users) {
+            if (user.getUserName().equals(txtUserNameModified.getText())) {
+                System.out.println(cmbUserTypeModified.getValue());
+                if (user.getPassword().equals(txtPasswordModified.getText())) {
+                    validUser = true;
 
+                    if (cmbUserTypeModified.getValue().equals("Admin")) {
+                        userModified = new UserImplementation(txtUserNameModified.getText(), txtPasswordModified.getText(), UserType.ADMIN);
+                    } else if (cmbUserTypeModified.getValue().equals("Passenger")) {
+                        userModified = new UserImplementation(txtUserNameModified.getText(), txtPasswordModified.getText(), UserType.PASSENGER);
+                    } else if (cmbUserTypeModified.getValue().equals("Employee")) {
+                        userModified = new UserImplementation(txtUserNameModified.getText(), txtPasswordModified.getText(), UserType.EMPLOYEE);
+                    }
+                    usersModify.add(userModified);
+
+                }
             }
+            if (!user.getUserName().equals(txtUserNameModified.getText())) {
+                usersModify.add(user);
+            }
+            FileHelper.usersToJsonFile(usersModify);
+        }
+        txtUserNameModified.clear();
+        txtPasswordModified.clear();
+        if (validUser) {
+            lblWrongUserModified.setTextFill(Color.LIGHTGREEN);
+            lblWrongUserModified.setText("User Modified");
+            lblWrongUserModified.setVisible(true);
         } else {
+            lblWrongUserModified.setTextFill(Color.ORANGE);
+            lblWrongUserModified.setText("User Not Valid");
             lblWrongUserModified.setVisible(true);
         }
     }

@@ -96,14 +96,14 @@
             </AnchorPane>
             <AnchorPane fx:id="modifyPermissionsPane" layoutX="-8.0" layoutY="0.0" prefHeight="602.0" prefWidth="638.0" style="-fx-background-color: grey" visible="false">
               <children>
-                <TextField id="txtUserName" fx:id="txtUserNameModified" layoutX="32.0" layoutY="159.0" prefWidth="200.0" promptText="User Name" />
+                <TextField fx:id="txtUserNameModified" layoutX="32.0" layoutY="159.0" prefWidth="200.0" promptText="User Name" />
                 <Button id="btnModiyUser" fx:id="btnModifyUser" font="$x1" layoutX="32.0" layoutY="383.0" mnemonicParsing="false" onAction="#btnModifyUserPressed" style="-fx-background-color: transparent;" text="Modify User" />
                 <Label fx:id="lblModifyUser" layoutX="32.0" layoutY="81.0" prefHeight="46.0" prefWidth="144.0" text="Modify user">
                   <font>
-                    <Font name="System Bold" size="20.0" />
+                    <Font name="System Bold" size="20.0" fx:id="x4" />
                   </font>
                 </Label>
-                <ComboBox id="cmbUserType" fx:id="cmbUserTypeToModify" blendMode="DARKEN" layoutX="32.0" layoutY="289.0" prefWidth="172.0" promptText="UserType" style="-fx-background-color: transparent;" visibleRowCount="3">
+                <ComboBox id="cmbUserType" fx:id="cmbUserTypeModified" blendMode="DARKEN" layoutX="32.0" layoutY="289.0" prefWidth="172.0" promptText="UserType" style="-fx-background-color: transparent;" visibleRowCount="3">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Admin" fx:id="AdminModify" />
@@ -113,7 +113,7 @@
                   </items>
                 </ComboBox>
                 <PasswordField fx:id="txtPasswordModified" layoutX="32.0" layoutY="222.0" prefWidth="200.0" promptText="Password" text="" />
-                <Label fx:id="lblWrongUserModified" font="$x1" layoutX="32.0" layoutY="345.0" prefHeight="25.0" prefWidth="259.0" text="Wrong UserName or Password!" textFill="#ff6666" visible="false" />
+                <Label fx:id="lblWrongUserModified" font="$x4" layoutX="32.0" layoutY="345.0" prefHeight="54.0" prefWidth="256.0" text="Wrong UserName or Password!" textFill="#ff6666" visible="false" />
               </children>
             </AnchorPane>
           </children>

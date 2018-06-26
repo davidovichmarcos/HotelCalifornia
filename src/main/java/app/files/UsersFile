@@ -1,15 +1,5 @@
 [
   {
-    "userName": "Employee",
-    "password": "employee",
-    "userType": "EMPLOYEE"
-  },
-  {
-    "userName": "test2",
-    "password": "test2",
-    "userType": "PASSENGER"
-  },
-  {
     "userName": "test3",
     "password": "test3",
     "userType": "EMPLOYEE"
@@ -38,5 +28,15 @@
     "userName": "asd",
     "password": "asd",
     "userType": "ADMIN"
+  },
+  {
+    "userName": "Employee",
+    "password": "employee",
+    "userType": "EMPLOYEE"
+  },
+  {
+    "userName": "test2",
+    "password": "test2",
+    "userType": "PASSENGER"
   }
 ]
