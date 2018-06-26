@@ -23,11 +23,11 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         // 1  Console Application
-        Hotel hotel = new Hotel();
-        Menu.menuPrincipal(hotel);
-        hotel.save();
+        //Hotel hotel = new Hotel();
+        //Menu.menuPrincipal(hotel);
+        //hotel.save();
         // 2 Window
-        // Application.launch(args);
+        Application.launch(args);
     }
 
     /**

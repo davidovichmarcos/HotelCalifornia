@@ -1,37 +1,7 @@
 [
   {
-    "userName": "test3",
-    "password": "test3",
-    "userType": "EMPLOYEE"
-  },
-  {
-    "userName": "test2",
-    "password": "test2",
-    "userType": "PASSENGER"
-  },
-  {
-    "userName": "Marcos",
-    "password": "admin",
-    "userType": "ADMIN"
-  },
-  {
     "userName": "test",
     "password": "test",
-    "userType": "ADMIN"
-  },
-  {
-    "userName": "Victor",
-    "password": "admin",
-    "userType": "ADMIN"
-  },
-  {
-    "userName": "Employee",
-    "password": "employee",
     "userType": "EMPLOYEE"
-  },
-  {
-    "userName": "asd",
-    "password": "asd",
-    "userType": "ADMIN"
   }
 ]

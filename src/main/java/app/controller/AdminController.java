@@ -194,7 +194,10 @@ public class AdminController {
                     }
                 }
             }
-            usersModify.add(user);
+            if(user.getUserName().equals(txtUserNameModified.getText()) && user.getPassword().equals(txtPasswordModified.getText()) && user.getUserType().equals(cmbUserTypeModified.getValue())) {
+                usersModify.add(user);
+            }
+
         }
         FileHelper.usersToJsonFile(usersModify);
         txtUserNameModified.clear();
