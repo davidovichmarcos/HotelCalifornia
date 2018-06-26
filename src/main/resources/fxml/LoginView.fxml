@@ -15,9 +15,9 @@
         <Image url="@../img/mardel.jpg" preserveRatio="true" smooth="true" />
       </image>
     </ImageView>
-    <TextField fx:id="txtUserName" layoutX="300.0" layoutY="198.0"  opacity="0.88" prefWidth="245.0" promptText="UserName" />
+    <TextField fx:id="txtUserName" layoutX="300.0" layoutY="198.0" opacity="0.88" prefWidth="245.0" promptText="UserName" />
     <PasswordField fx:id="txtPassword" layoutX="300.0" layoutY="274.0" opacity="0.88" prefWidth="245.0" promptText="Password" />
-    <Button fx:id="btnCancel" layoutX="429.0" layoutY="357.0" mnemonicParsing="false" onAction="#btnCancelPressed" style="-fx-background-color: transparent;" text="Cancel">
+    <Button fx:id="btnCancel" layoutX="272.0" layoutY="349.0" mnemonicParsing="false" onAction="#btnCancelPressed" style="-fx-background-color: transparent;" text="Cancel">
       <font>
         <Font name="System Bold" size="30.0" fx:id="x3" />
       </font>
@@ -25,7 +25,7 @@
         <Color blue="1.000" green="0.639" red="0.400" fx:id="x2" />
       </textFill>
     </Button>
-    <Button fx:id="btnLogin" font="$x3" layoutX="279.0" layoutY="357.0" mnemonicParsing="false" onAction="#btnLoginPressed" style="-fx-background-color: transparent;" text="Login" textFill="$x2" />
+    <Button fx:id="btnLogin" font="$x3" layoutX="441.0" layoutY="349.0" mnemonicParsing="false" onAction="#btnLoginPressed" style="-fx-background-color: transparent;" text="Login" textFill="$x2" />
     <Label fx:id="lblWrongUser" layoutX="300.0" layoutY="329.0" prefWidth="141.0" text="Wrong User!" textFill="#ff3333" visible="false">
       <font>
         <Font name="System Bold" size="15.0" fx:id="x1" />

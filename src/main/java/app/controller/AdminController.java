@@ -152,19 +152,23 @@ public class AdminController {
     private void btnCreateUserPressed(ActionEvent event) {
         System.out.println("btn create user pressed");
         setAllPanesNotVisible();
-        lblUserCreated.setVisible(false);
         paneCreateUser.setVisible(true);
 
     }
 
+    /**
+     * The logic functionality of the button and the message labels.
+     */
     @FXML
     private void btnModifyPermissionsPressed() {
         System.out.println("btn modify permissions pressed");
         setAllPanesNotVisible();
-        lblWrongUserModified.setVisible(false);
         modifyPermissionsPane.setVisible(true);
     }
 
+    /**
+     * The Logic functionality of the button and the message labels.
+     */
     @FXML
     private void btnModifyUserPressed() {
         System.out.println("btn modify user pressed");
@@ -177,24 +181,22 @@ public class AdminController {
             if (user.getUserName().equals(txtUserNameModified.getText())) {
                 System.out.println(cmbUserTypeModified.getValue());
                 if (user.getPassword().equals(txtPasswordModified.getText())) {
-                    validUser = true;
-
-                    if (cmbUserTypeModified.getValue().equals("Admin")) {
-                        userModified = new UserImplementation(txtUserNameModified.getText(), txtPasswordModified.getText(), UserType.ADMIN);
-                    } else if (cmbUserTypeModified.getValue().equals("Passenger")) {
-                        userModified = new UserImplementation(txtUserNameModified.getText(), txtPasswordModified.getText(), UserType.PASSENGER);
-                    } else if (cmbUserTypeModified.getValue().equals("Employee")) {
-                        userModified = new UserImplementation(txtUserNameModified.getText(), txtPasswordModified.getText(), UserType.EMPLOYEE);
+                    if (cmbUserTypeModified.getValue() != null) {
+                        validUser = true;
+                        if (cmbUserTypeModified.getValue().equals("Admin")) {
+                            userModified = new UserImplementation(txtUserNameModified.getText(), txtPasswordModified.getText(), UserType.ADMIN);
+                        } else if (cmbUserTypeModified.getValue().equals("Passenger")) {
+                            userModified = new UserImplementation(txtUserNameModified.getText(), txtPasswordModified.getText(), UserType.PASSENGER);
+                        } else if (cmbUserTypeModified.getValue().equals("Employee")) {
+                            userModified = new UserImplementation(txtUserNameModified.getText(), txtPasswordModified.getText(), UserType.EMPLOYEE);
+                        }
+                        usersModify.add(userModified);
                     }
-                    usersModify.add(userModified);
-
                 }
             }
-            if (!user.getUserName().equals(txtUserNameModified.getText())) {
-                usersModify.add(user);
-            }
-            FileHelper.usersToJsonFile(usersModify);
+            usersModify.add(user);
         }
+        FileHelper.usersToJsonFile(usersModify);
         txtUserNameModified.clear();
         txtPasswordModified.clear();
         if (validUser) {
@@ -217,6 +219,8 @@ public class AdminController {
     @FXML
     private void btnCreatePressed(ActionEvent event) {
         UserImplementation user = null;
+        txtUserName.clear();
+        txtPassword.clear();
         System.out.println("btn create pressed");
         if (!txtUserName.getText().isEmpty()) {
             if (!txtPassword.getText().isEmpty()) {
@@ -265,5 +269,10 @@ public class AdminController {
         gridRoomsPane.setVisible(false);
         presentationPane.setVisible(false);
         modifyPermissionsPane.setVisible(false);
+        lblUserCreated.setVisible(false);
+        lblWrongUserModified.setVisible(false);
+        cmbUserType.setValue("User Type");
+        cmbUserTypeModified.setValue("User Type");
     }
+
 }
