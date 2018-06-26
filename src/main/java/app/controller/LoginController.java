@@ -23,6 +23,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+/**
+ *  The LoginController view.
+ */
 public class LoginController {
 	@SuppressWarnings("unused")
     private Main mainApp;
@@ -50,6 +53,12 @@ public class LoginController {
     private void initialize() {
 
     }
+
+	/**
+	 * Shows or the new view or the label wrong user.
+	 * @param event the ActionEvent to the view.
+	 * @throws IOException iOException.
+	 */
     @FXML
     public void btnLoginPressed(ActionEvent event) throws IOException {
     	System.out.println("btn login pressed");
@@ -92,7 +101,12 @@ public class LoginController {
     	
     	
     }
-    
+
+	/**
+	 * Go back to the main view
+	 * @param event the ActionEvent to the view.
+	 * @throws IOException iOException.
+	 */
     @FXML
     public void btnCancelPressed(ActionEvent event) throws IOException {
     	System.out.println("btn cancel pressed");

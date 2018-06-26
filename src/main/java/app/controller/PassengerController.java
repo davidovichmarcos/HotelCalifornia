@@ -14,6 +14,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+/**
+ *  The PassengerController class.
+ */
 public class PassengerController {
 	@FXML
 	private Button btnCancel;
@@ -33,6 +36,11 @@ public class PassengerController {
     private void initialize() {
 
     }
+
+    /**
+     * Go back to the login view.
+     * @param event the ActionEvent to the view.
+     */
     @FXML
     private void btnCancelPressed(ActionEvent event) {
     	try

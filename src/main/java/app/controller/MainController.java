@@ -27,6 +27,9 @@ import java.util.ResourceBundle;
 import app.Main;
 
 
+/**
+ *  The MainController Class.
+ */
 public class MainController {
 	@SuppressWarnings("unused")
     private Main mainApp;
@@ -49,10 +52,15 @@ public class MainController {
     	
     	
     }
+
+    /**
+     * Access to the LoginView.
+     * @param event the ActionEvent to the view.
+     * @throws IOException iOException.
+     */
     @FXML
     public void btnAccessPressed(ActionEvent event) throws IOException {
         System.out.println("btn access pressed");
-
         // Swap screen
         Stage window = (Stage) btnAccess.getScene().getWindow();
         FXMLLoader loginLoader = new FXMLLoader();
