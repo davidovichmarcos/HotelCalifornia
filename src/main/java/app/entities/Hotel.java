@@ -2,6 +2,7 @@ package app.entities;
 
 import app.helpers.FileHelper;
 
+import java.io.File;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -13,9 +14,12 @@ public class Hotel {
     private TreeMap<Integer, TreeSet<Booking>> bookings = new TreeMap<Integer, TreeSet<Booking>>();
     private TreeSet<Passenger> passengers = new TreeSet<>();
     private TreeSet<Employee> employees = new TreeSet<>();
+    private TreeSet<Admin> admins = new TreeSet<>();
 
 
     public Hotel () {
+        this.admins.addAll(FileHelper.getAdminsFromJson());
+        this.employees.addAll(FileHelper.getEmployeesfromJson());
         this.rooms.addAll(FileHelper.getRoomsFromJson());
         this.passengers.addAll(FileHelper.getPassengersfromJson());
         this.bookings.putAll(FileHelper.getBookingsfromJson());
@@ -280,10 +284,11 @@ public class Hotel {
     }
 
     public void save() {
-        // TODO   Arme este metodo para grabar una ves...pero creo q tendriamos que borrarlo
-        //FileHelper.roomsToJsonFile(this.rooms);
-        //FileHelper.passengersToJsonFile(this.passengers);
-        //FileHelper.bookingsToJsonFile(this.bookings);
+        FileHelper.roomsToJsonFile(this.rooms);
+        FileHelper.passengersToJsonFile(this.passengers);
+        FileHelper.bookingsToJsonFile(this.bookings);
+        FileHelper.employeesToJsonFile(this.employees);
+        FileHelper.adminsToJsonFile(this.admins);
     }
 
 

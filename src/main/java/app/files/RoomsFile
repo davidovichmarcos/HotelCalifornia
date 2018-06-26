@@ -33,6 +33,7 @@
     },
     "guest": {
       "originAddress": "Bolivar 2474, Mar del Plata",
+      "history": [],
       "name": "Daria",
       "lastName": "Morgendorffer",
       "email": "daria@pepe.com",
@@ -66,6 +67,7 @@
     },
     "guest": {
       "originAddress": "Moreno 2474, Mar del Plata",
+      "history": [],
       "name": "Homer",
       "lastName": "Simpson",
       "email": "simpsons@pepe.com",
@@ -91,6 +93,7 @@
     },
     "guest": {
       "originAddress": "Alberti 2474, Mar del Plata",
+      "history": [],
       "name": "Osama",
       "lastName": "Bin Laden",
       "email": "ala@pepe.com",
@@ -156,6 +159,7 @@
     },
     "guest": {
       "originAddress": "Falucho 2474, Mar del Plata",
+      "history": [],
       "name": "Rick",
       "lastName": "\u0026 Morty",
       "email": "dimension@pepe.com",

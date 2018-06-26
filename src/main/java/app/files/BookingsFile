@@ -5,6 +5,7 @@
       "room": 1,
       "passenger": {
         "originAddress": "Belgrano 2474, Mar del Plata",
+        "history": [],
         "name": "Aladin",
         "lastName": "Lamparin",
         "email": "disney@pepe.com",
@@ -28,6 +29,7 @@
       "room": 2,
       "passenger": {
         "originAddress": "Belgrano 2474, Mar del Plata",
+        "history": [],
         "name": "Aladin",
         "lastName": "Lamparin",
         "email": "disney@pepe.com",
@@ -49,6 +51,7 @@
       "room": 2,
       "passenger": {
         "originAddress": "Cordoba 2474, Mar del Plata",
+        "history": [],
         "name": "Patti",
         "lastName": "Mayonaise",
         "email": "doug@pepe.com",
@@ -72,6 +75,7 @@
       "room": 3,
       "passenger": {
         "originAddress": "Belgrano 2474, Mar del Plata",
+        "history": [],
         "name": "Aladin",
         "lastName": "Lamparin",
         "email": "disney@pepe.com",
@@ -95,6 +99,7 @@
       "room": 4,
       "passenger": {
         "originAddress": "Belgrano 2474, Mar del Plata",
+        "history": [],
         "name": "Aladin",
         "lastName": "Lamparin",
         "email": "disney@pepe.com",
